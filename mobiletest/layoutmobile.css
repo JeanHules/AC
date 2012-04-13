@@ -1,0 +1,482 @@
+body{
+	background-color: black;
+	visibility: hidden;
+	font-family: 'Quattrocento Sans', sans-serif; 
+	font-weight: 100;
+	margin:0;
+	}
+
+
+
+.container{
+	top: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width:320px;
+	left:0px;
+	}
+	
+.thegoods{
+	top:0px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width:320px;
+	left:0px;
+	}
+		
+#header{
+		background-color:#252525;
+		position: fixed;
+		top: 0px;
+		margin:0;
+		height: 40px;
+		width: 100%;
+		z-index: 3000;
+		border-bottom: 1px solid white;
+		}	
+		
+#headerbutton{
+		background: url(../img/button.png);
+		background-repeat: no-repeat;
+		position: fixed;
+		top: 6px;
+		left:14px;
+		height: 40px;
+		width:43px;
+		z-index: 4000;
+		}	
+	
+.instructions{position: relative;
+			  top: 46px;
+			  left: 82px;
+			  font-size: 19px;
+			  color: #f710ef;
+			  width:160px;}	
+
+#audiocontrols{position: fixed;
+			   bottom:-40px;
+			   background-color: black;
+			   width:320px;
+			   height:33px;
+			   z-index: 30;}
+	
+#sharelink{
+		background: url(../img/share.png);
+		position: absolute;
+		top: 10px;
+		left:5px;
+		height: 15px;
+		width:48px;
+		z-index: 40;
+		}	
+
+.headername{position: relative;	
+			top:10px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			color: #f710ef;
+			font-size: 20px;
+			width:152px;}
+		
+.square {
+	position:relative;
+	float: left;
+	padding: 0;
+	margin:0px;
+	width:150px;
+	height:150px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+    }
+
+.box {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	height: 38px;
+	width:150px;
+	opacity: .7;
+	background: black;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+	display: inline;
+	overflow: hidden;
+    }
+	
+			
+.img1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-radius: 5px;
+	height:150px;
+	width:150px;
+    }
+    
+.date{position: relative;
+	top:0px;
+	left:10px;
+	font-size:18px;
+	margin:0px;
+	width:280px;
+	height:15px;
+	}
+
+.datespace{
+	width: 44px;
+	height: 40px;
+	position: relative;
+	top: 6px;}
+		
+h1{ 
+	top:4px;
+	left:2px;
+	font-size: 14px;
+	margin:0px 0px 0px 4px;
+	width:280px;
+	height:15px;
+	}
+	
+h2, h4, h5, .smallname, .smalltitle, h1, .smalldesc, .date{
+	font-weight: 100;
+	position: relative;
+	color:#a3a8a4;
+	}	
+		
+h2{
+	top:6px;
+	left:2px;
+	font-size: 13px;
+	margin:0px 0px 0px 4px;
+	width:280px;
+	height:15px;
+	}
+	
+.player{
+	position: relative;
+	top:16.5px;
+	left:23px;
+	width:220px;
+	display: block;
+	}
+    		
+.player, x:-moz-any-link {
+	left:17px;
+	}
+
+#roast {
+	background-color: #252525;
+	z-index: 1000;
+	margin: 0px;
+	height: 39px;
+	width: 246px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;	
+	cursor:pointer;
+	position: relative;
+	top:39px;
+	text-decoration: none;
+	color:white;
+		  }
+		  
+#roastbutton{
+	background-color: #252525;
+	z-index: 1000;
+	margin: 0px;
+	height: 39px;
+	width: 259px;
+	border-radius: 10px;	
+	cursor: pointer;
+	position: relative;
+	top:39px;
+	text-decoration: none;
+		  }
+
+#roastbutton, x:-moz-any-link{top:0px;
+							  width:258px;}
+		  
+#roastbutton:hover{
+		text-decoration: none;
+		}
+		  
+#filters{	
+		position:fixed;
+		display: inline-block;
+		left: -259px;
+		top:2px;
+		width: 306px;
+		z-index: 1000;
+		cursor: default;}
+
+#filters, x:-moz-any-link{width:256px;}
+	
+#filters h5{
+	top:10px;
+	left:40px;
+	font-size: 20px;
+	margin:0px;
+	width:190px;
+	color:white;
+	text-decoration: none;
+	}
+	
+#filters.fixed {
+	position: fixed;
+	top:0px;
+	left: inherit;
+	}	
+
+#filters ul li {
+	list-style:none;
+	margin:0px 0;
+	display: inline-block;
+	}
+	
+#filters ul li:active{
+	opacity: .8;
+	}
+	
+#filters ul{
+	position: relative;
+	top: 1px;
+	left: -39px;
+	margin: 0px;
+	}
+					
+.my-custom-button {
+	padding: 10px;
+	border: 0px;
+	margin-bottom: -4px;
+	width: 237px;
+	height: 20px;
+	background: url(../img/metal-buttons.png)0 45px;
+	color: #787676;	 
+	}
+		
+.my-custom-button.selected {
+	background: url(../img/metal-buttons.png);
+	color:#f710ef;
+	}
+ 
+#toggle{
+	text-align: right;
+	position: relative;
+	top: 0px;
+	left: 258px;
+	background-color: #252525;
+	height: 39px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 48px;
+	cursor: default;
+	}
+	
+#toggle:hover{cursor: pointer;}
+
+#toggle, x:-moz-any-link{left:256px;}
+							  		
+#toggle:hover #gear{
+	opacity: .75;
+	}
+
+
+#filters ul label{
+	position: relative;
+	left:0px;
+	top:0px;
+	}
+
+#gear{
+	position: relative;
+	top: 1px;
+	left: 1px;
+	}
+	
+#shufflebuttons{
+background-color: black;
+border-radius: 10px;
+height: 31px;
+width: 80px;
+position: absolute;
+bottom: 2px;
+right: -3px;
+z-index: 1000;
+display: block;
+	}	
+	
+#shuffle{
+	position: relative;
+	top: 2px;
+	left: 5px;
+	display: block;
+	height:30px;
+	width:45px;
+	}
+	
+#original-order{
+	position: relative;
+	top: 2px;
+	left: 5px;
+	display: none;
+	height:30px;
+	width:45px;
+	}
+	
+.onshuffle, .offshuffle{
+	position: relative;
+	top: -21px;
+	left: 53px;
+	font-size: 16px;
+	}
+	
+.onshuffle{	
+	display: none;
+	color:#f710ef;
+	}	
+	
+.offshuffle{
+	display: block;
+	color:#787676;
+	}
+	
+
+#globalcontrols{position: relative;
+		  bottom:0px;
+		  left:80px;
+		  background-color: black;
+		  opacity: .9;
+		  height:34px;
+		  width:100%;
+		  z-index: 1000;
+		  border-radius: 15px;
+		  display: block;
+		  }
+		   
+#globalforward{background: url(../img/controls.png)0 -1px;
+		   height:32px;
+		   width:40px;
+		   position: relative;
+		   top:2px;
+		   left:111px;
+		   opacity: .8;}
+		   
+#globalforward:hover{opacity: 1;}
+
+#globalforward:active{
+    color: #FFF;
+    text-shadow: 0 0 150px #FFF, 0 0 60px #FFF, 0 0 10px #FFF;
+}
+		   
+#globalback{background: url(../img/controls.png)0 -30px;
+		   height:32px;
+		   width:40px;
+		   position: relative;
+		   top:-34px;
+		   left:9px;
+		   opacity: .8;}
+		   
+#globalback:hover{opacity: 1;}
+		   
+#globalplay{background: url(../img/controls.png)0 -101px;
+		height: 32px;
+		width: 40px;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		display:none;
+		opacity: .8;}
+		
+#globalplay:hover{opacity: 1;}
+
+#globalpause{background: url(../img/controls.png)0 -69px;
+		   height: 32px;
+			width: 40px;
+			position: relative;
+			top: 0px;
+			left: 0px;
+		   display:block;
+		   opacity: .8;}
+		   
+#globalpause:hover{opacity: 1;}
+		   
+#globalplaypause{height:40px;
+		   width:40px;
+		   position: relative;
+		   top:-64px;
+		   left:59px;
+		   display: block;}
+
+.facebook{position: relative;
+		  top:4px;
+		  left:10px;
+		  z-index:1;
+		  width:32px;}
+		  
+.twitter{position: relative;
+ 		 top:-25px;
+ 		 left:70px;
+ 		 z-index: 3;
+ 		 width:32px;}
+ 		 
+.email{position: relative;
+ 		 top:-55px;
+ 		 left:130px;
+ 		 z-index: 3;
+ 		 width:32px;}
+ 		 
+.social{
+	position: absolute;
+	bottom: 2px;
+	left: 0px;
+	width: 171px;
+	z-index: 10;
+	background-color: black;
+	border-top-right-radius: 10px;
+	display: none;
+	height: 70px;
+	
+	}
+		
+.fab_button{background: url(../img/social_buttons.png)0 -30px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+		
+.fab_button:hover{background: url(../img/social_buttons.png)0 0px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+		
+.twi_button{background: url(../img/social_buttons.png)0 -120px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+		
+.twi_button:hover{background: url(../img/social_buttons.png)0 -90px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+		 
+.email_button{background: url(../img/social_buttons.png)0 -300px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+		
+.email_button:hover{background: url(../img/social_buttons.png)0 -270px;
+		   height:30px;
+		   width:30px;
+		   }
+		   
+</style>

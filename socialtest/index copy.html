@@ -1,0 +1,3405 @@
+<!doctype html>
+
+<head>
+	<meta charset='utf-8'> 
+    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Audible Coffee</title>
+    
+    <meta property="og:title" content="Audible Coffee" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.audiblecoffee.com/" />
+	<meta property="og:image" content="http://www.audiblecoffee.com/img/logo.jpg" />
+	<meta property="fb:admins" content="184905639" />
+
+	
+	<link rel="image_src" href="http://www.audiblecoffee.com/img/logo.jpg"/>
+	<link rel="icon" href="../../img/mug.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="../../img/mug.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" type="text/css" href="layouttest.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/miniplayertest.css"/>
+ 	<link rel="stylesheet" type="text/css" href="../css/puzzle.css"/>
+ 	<link rel="stylesheet" type="text/css" href="../css/skeleton.css"/>
+ 	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+ 
+ 	
+</head>  
+
+<style type="text/css">
+  .square h1 { color: #a3a8a4; }
+  .square.hover h1 { color: #f710ef; }
+  .square.playing h1 { color: #f710ef; }
+  
+  .square h2 { color: #a3a8a4; }
+  .square.hover h2 { color: white; }
+  .square.playing h2 { color: white; }
+  
+  .square .smallname { color: #a3a8a4; }
+  .square.hover .smallname { color: #f710ef; }
+  .square.playing .smallname { color: #f710ef; }
+  
+  .square .smalltitle { color: #a3a8a4; }
+  .square.hover .smalltitle { color: white; }
+  .square.playing .smalltitle { color: white; }
+  
+  .square.hover .img1 { opacity: 0.5; }
+  .square.hover .background { opacity: 0.9; }
+  .square.playing .img1 { opacity: 0.5; }
+  .square.playing .background { opacity: 0.9; }
+
+  .square .box { height: 50px; opacity: 0.7; }
+  .square.hover .box { height: 160px; opacity: 0.8; }
+  .square.playing .box { height: 160px; opacity: 0.8; }
+  
+  .square .close,
+  .square .boxtop 
+  .square.social{ display: none; }
+  .square.hover .close,
+  .square.hover .boxtop, 
+  .square.hover .social { display: block; }
+  .square.playing .close,
+  .square.playing .boxtop, 
+  .square.playing .social { display: block; }
+</style>
+
+<style type="text/css">
+
+#thegoods{
+	padding: 0px 10px 10px 34px; 
+	width: auto;
+	height:100%; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 1px;	
+	z-index: 500;
+	}
+		
+   
+#logo {
+	position: relative;
+	top:7px;
+	left:2px;
+	z-index: 9;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	}
+
+.container{
+	top: -4px;
+	width: 100%;
+	height:100%;
+	margin-left: 5px;
+    }
+    
+.facebook{position: relative;
+		  top:0px;
+		  left:0px;
+		  z-index:1;
+		  height:29px;
+		  width:29px;
+		  opacity: .8;
+		  border-radius: 15px;}
+		  
+.twitter{position: relative;
+ 		 top:-29px;
+ 		 left:55px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+ 		 
+.email{position: relative;
+ 		 top:-58px;
+ 		 left:110px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.googleplus{position: relative;
+ 		 top:-87px;
+ 		 left:165px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.social{position: absolute;
+		top:66px;
+		right:81px;
+		display: none;
+		width:151px;}
+		
+.fab_button{background: url(../img/socialbuttons2.png)0 -416px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.fab_button:hover{background: url(../img/socialbuttons2.png)1px -465px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.twi_button{background: url(../img/socialbuttons2.png)0 -514px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.twi_button:hover{background: url(../img/socialbuttons2.png)0 -564px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		 
+.email_button{background: url(../img/socialbuttons2.png)0 -618px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.email_button:hover{background: url(../img/socialbuttons2.png)0 -672px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+	.twitter-follow-button{margin-top:10px;}
+	
+#nameprompt{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 3001;
+	background-color: black;
+	border-radius: 15px;
+	display: block;
+}	
+
+#submitbutton{
+	position: relative;
+	top:236px;
+	left:107px;
+	width:100px;
+	height:50px;
+	background-color: red;
+	border-radius: 10px;}
+	
+.submittext{
+	position: relative;
+	top:18px;
+	left:24px;
+	color:#848484;
+	font-size: 14px;}
+
+.prompttitle{
+	position: relative;
+	top:30px;
+	left:37px;
+	color: #f710ef;}
+
+#promptfield{
+	position: relative;
+	top:200px;
+	left:90px;}
+	
+
+.zM {display: none !important;}
+		   
+#___plusone_0{width:60px;}
+		   
+</style>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=255228347849970";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<div id="sharetabs">
+			
+				<div class="twittab">
+					<div class="twitcon"></div>
+					<div class="twitterbutton"><a href="https://twitter.com/audiblecoffee" class="twitter-follow-button" data-show-count="false">Follow @audiblecoffee</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+				
+				<div id="googfaceblack">
+					<div class="gogplustab">
+						<div class="googlecon"></div>
+						<div class="gicon">
+							<div class="g-plusone" data-size="tall" data-annotation="inline" data-width="100"  data-href="http://www.audiblecoffee.com"></div>
+						</div>
+					</div>
+						
+					<div id="faceblack">
+						<div class="fbooktab">
+							<div class="fbookcon"></div>
+							<div class="fb-like" data-href="http://www.facebook.com/audiblecoffee" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-font="arial">
+							</div>
+						</div>
+							
+					<div id="black">
+						<div class="black"></div>
+					</div>
+					</div>
+					</div>
+
+</div>
+
+
+</div>
+<a href="http://www.audiblecoffee.com/about/" target="_blank" id="about">About</a>
+<a href="http://www.audiblecoffee.com/faq/" target="_blank" id="faq">FAQ</a>
+
+<div id="globalcontrols">
+<div id="globalforward"></div>
+<div id="globalback"></div>
+<div id="globalplaypause">
+<div id="globalplay"></div>
+<div id="globalpause"></div>
+</div>
+</div>
+<div id="shufflebuttons">
+<img src="../img/shufflegrey.png" id="shuffle" class="shuffles"/>
+<img src="../img/shuffle.png" id="original-order" class="shuffles"/>
+<span class="onshuffle">On</span>
+<span class="offshuffle">Off</span>
+</div>
+
+<div id="filters">
+<a href="http://www.audiblecoffee.com/genre/" target="_blank" id="roast"><div id="roastbutton"><h5>What's Your Roast?</h5></div></a>
+<div id="toggle"><img src="../img/newmug.png" id="gear"/></div>
+
+<ul>
+	
+	<li>
+		<input type="checkbox" value=".bigroom" name="genre" id="bigroom" checked="checked" />
+		<label for="bigroom">Big Room Progressive</label>
+	</li>
+	<li>
+		<input type="checkbox" value=".dance" name="genre" id="dance" checked="checked" />
+		<label for="dance">Dance</label>
+	</li>
+	<li>
+		<input type="checkbox" value=".drumandbass" name="genre" id="drumandbass" checked="checked" />
+		<label for="drumandbass">Drum & Bass</label>
+	</li>
+	<li>
+		<input type="checkbox" value=".dubstep" name="genre" id="dubstep" checked="checked" />
+		<label for="dubstep">Dubstep</label>
+	</li>
+	<li>
+		<input type="checkbox" value=".dutchhouse" name="genre" id="dutchhouse" checked="checked" />
+		<label for="dutchhouse">Dutch House</label>
+	</li>	
+	<li>
+		<input type="checkbox" value=".electrohouse" name="genre" id="electrohouse" checked="checked" />
+		<label for="electrohouse">Electro House</label>
+	</li>	
+	<li>
+		<input type="checkbox" value=".nudisco" name="genre" id="nudisco" checked="checked" />
+		<label for="nudisco">Nu Disco</label>
+	</li>	
+	<li>
+		<input type="checkbox" value=".progressivehouse" name="genre" id="progressivehouse" checked="checked" />
+		<label for="progressivehouse">Progressive House</label>
+	</li>
+	<li>
+		<input type="checkbox" value=".techhouse" name="genre" id="techhouse" checked="checked" />
+		<label for="techhouse">Tech House</label>
+	</li>	
+	<li>
+		<input type="checkbox" value=".trance" name="genre" id="trance" checked="checked" />
+		<label for="trance">Trance</label>
+	</li>
+
+</ul>
+
+
+</div>
+
+  
+<div id="thegoods">
+<img src="../img/new_mug_logo1.png" id="logo" /></a>
+
+<div class="container">
+
+<div class="square dance">
+    <!-- DJ Picture -->
+    <img src="../pictures/r3hab.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m129
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Taio Cruz - Troublemaker (R3hab Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m129" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m129"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>10</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>R3hab</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Troublemaker (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Although Taio Cruz adds very little, if anything, to this track, R3hab saves the day with a solid electro beat and an upbeat, melodic chorus. It is a great party tune regardless of the audience.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m129" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Taio_Cruz_Troublemaker_R3hab_Remix.ogg'}" href="../mp3/Taio_Cruz_Troublemaker_R3hab_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl24.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m128
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Beyonce - End of Time (Wulf and Forever Kid Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m128" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m128"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>10</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Wulf & Forever Kid</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>End of Time (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Sweeping, detuned, big-room synths serve as accompaniment to Beyonce's fierce voice, and the result is fantastic. This gem was provided by Megan from Colorado, USA!</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m128" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Beyonce_End_of_Time_Wulf_and_Forever_Kid_Remix.ogg'}" href="../mp3/Beyonce_End_of_Time_Wulf_and_Forever_Kid_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square electrohouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl23.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Electro House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m127
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Probe - Ultimate (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m127" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m127"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>09</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Probe</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Ultimate (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This one is a great example of modern electro. Progressive breakdown? Yep. Slight wobble? You know it. Multitude of samples? Of course. It's a solid track that is not overly caffeinated in any way.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m127" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Probe_Ultimate_Original_Mix.ogg'}" href="../mp3/Probe_Ultimate_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/matisse.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m126
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=M-3ox - Beating Of My Heart feat. Heidrun (Matisse and Sadko Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m126" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m126"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>09</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Matisse & Sadko</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Beating Of My Heart (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This duo continues to make big-room anthems. This remix is powerful, catchy, and uplifting, which is everything you'd expect from a track within this genre. The vocals and lyrics are great as well.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m126" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/M3ox_feat_Heidrun_Beating_Of_My_Heart_Matisse_and_Sadko_Remix.ogg'}" href="../mp3/M3ox_feat_Heidrun_Beating_Of_My_Heart_Matisse_and_Sadko_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl22.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m125
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Dirty South, Those Usual Suspects - Walking Alone feat. Erik Hecht (Fluxus Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m125" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m125"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>08</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Fluxus</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Walking Alone (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Although the original mix of this song is good, the chorus lacks emotion. This remix may be simple, but the chord progression is touching in all the right ways. Props to Megan from Colorado, USA!</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m125" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Dirty_South_and_The_Usual_Suspects_Walking_Alone_feat_Erik_Hecht_Fluxus_Remix.ogg'}" href="../mp3/Dirty_South_and_The_Usual_Suspects_Walking_Alone_feat_Erik_Hecht_Fluxus_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+
+<div class="square techhouse">
+    <!-- DJ Picture -->
+    <img src="../../pictures/andrewbayer.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Tech House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m124
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Above and Beyond - Prelude (Andrew Bayer and James Grant Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m124" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m124"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>08</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Andrew Bayer & James Grant</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Prelude (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">This decaffeinated gem is better aligned with proper house than it is tech house. It's so fresh and so clean that anyone can appreciate the classy vibe that it sets. Thanks go to Jason from the USA.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m124" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Above_and_Beyond_Prelude_Andrew_Bayer_and_James_Grant_Remix.ogg'}" href="../mp3/Above_and_Beyond_Prelude_Andrew_Bayer_and_James_Grant_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square dubstep">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl21.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dubstep</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m123
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Kelis - Brave (Gemini Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m123" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m123"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>07</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Gemini</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Brave (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Gemini once again crushes it with his signature dubstep recipe: Smooth vocals, solid sampling thereof, and heaps of powerfully melodic wobble. Very simple, yet equally effective. Props to AYNE.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m123" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Kelis_Brave_Gemini_Remix.ogg'}" href="../mp3/Kelis_Brave_Gemini_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+
+<div class="square nudisco">
+    <!-- DJ Picture -->
+    <img src="../pictures/lenno.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Nu Disco</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m122
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Dirty South, Thomas Gold - Eyes Wide Open feat. Kate Elsworth (Lenno Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m122" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m122"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>07</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Lenno</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Eyes Wide Open (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This remix is pure fun. The song balances house and disco elements to create a relaxed, but danceable atmosphere thanks to sliced, big-room chords that yield a bit of extra bounce in the beat.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m122" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Dirty_South_and_Thomas_Gold_Eyes_Wide_Open_feat_Kate_Elsworth_Lenno_Remix.ogg'}" href="../mp3/Dirty_South_and_Thomas_Gold_Eyes_Wide_Open_feat_Kate_Elsworth_Lenno_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/siege.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m121
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Siege - Roads (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m121" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m121"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>06</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Siege</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Roads (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>A solid chord progression yields a solid big-room track. Although there is nothing extraordinary about this track, it contains only a moderate level of caffeine, which is rare for this genre.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m121" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Siege_Roads_Original_Mix.ogg'}" href="../mp3/Siege_Roads_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square dubstep">
+    <!-- DJ Picture -->
+    <img src="../pictures/virtualriot.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dubstep</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m120
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Virtual Riot - Superhuman (Club Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m120" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m120"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>06</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Virtual Riot</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Superhuman (Club Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This one has a really cool mixture of pretty vocals, trance melodies, and filthy wobble. The result is aggressive, yet downtempo. Thanks go to Bence for this unique track.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m120" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Virtual_Riot_and_Amba_Shepherd_Superhuman_Club_Mix.ogg'}" href="../mp3/Virtual_Riot_and_Amba_Shepherd_Superhuman_Club_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/shingo.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m119
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Kazusa, Shingo Nakamura - Dice (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m119" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m119"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>05</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Shingo Nakamura & Kazusa</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Dice (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">Shingo is the Dinka of the progressive trance world. He only uses the most pleasant of sounds to weave songs that are both soothing and mesmerizing. This one is beautiful and relaxing as well.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m119" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Kazusa_and_Shingo_Nakamura_Dice_Original_Mix.ogg'}" href="../mp3/Kazusa_and_Shingo_Nakamura_Dice_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/yves.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m118
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Yves Larock - We (Instrumental Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m118" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m118"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>05</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Yves Larock</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>We (Instrumental Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This track's ascending chord progression is quite uplifting, but it never gets lost in the clouds as it manages to keep a soundstage that is free from clutter and overcompression.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m118" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Yves_Larock_We_Instrumental_Mix.ogg'}" href="../mp3/Yves_Larock_We_Instrumental_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square electrohouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl19.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Electro House </span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m117
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Max K. - What Love Can Do (2Complex Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m117" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m117"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>05</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>2Complex</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>What Love Can Do (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The contrast between the nearly acapella breakdowns and the big-room influenced drops is exquisite. The distinct electro buzz and slight wobble further emphasizes the contrast.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m117" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Max_K_What_Love_Can_Do_2Complex_Remix.ogg'}" href="../mp3/Max_K_What_Love_Can_Do_2Complex_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+
+<div class="square nudisco">
+    <!-- DJ Picture -->
+    <img src="../pictures/tommiesunshine.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Nu Disco</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m116
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Tommie Sunshine, Disco Fries - Don't Look Back (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m116" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m116"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>04</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Tommie Sunshine & The Disco Fries</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Don't Look Back (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">Simple, enjoyable, and catchy. The vocals and lyrics fit this track like a glove. The result is something you can definitely tap your foot and sip a drink to.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m116" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Tommie_Sunshine_Disco_Fries_Dont_Look_Back_Original_Mix.ogg'}" href="../mp3/Tommie_Sunshine_Disco_Fries_Dont_Look_Back_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/sander.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m115
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Sander van Doorn - Chasin' (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m115" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m115"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>03</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Sander van Doorn</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Chasin' (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Slight pitch-bends create an interesting melody that builds into quite the drop. Despite the breadth of different sounds, the track remains cohesive and maintains its direction from start to finish.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m115" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Sander_van_Doorn_Chasin_Original_Mix.ogg'}" href="../mp3/Sander_van_Doorn_Chasin_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/dubvision.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House </span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m114
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=DubVision - All By Myself (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m114" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m114"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>02</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>DubVision</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>All By Myself (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>You might be familiar with the vocal sample contained within this track since it was featured in a very prominent track by Moby called "In This World". DubVision takes that chiller to anthem status.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m114" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/DubVision_All_By_Myself_Original_Mix.ogg'}" href="../mp3/DubVision_All_By_Myself_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square nudisco">
+    <!-- DJ Picture -->
+    <img src="../pictures/madeon.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Nu Disco</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m113
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Madeon - Icarus (Extended Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m113" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m113"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>02</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Madeon</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Icarus (Extended Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The child prodigy, Madeon, unleashes yet another complex disco/French house banger in the form of "Icarus". This feel good track never ceases to entertain with its abundance of different samples. </h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m113" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Madeon_Icarus_Extended_Mix.ogg'}" href="../mp3/Madeon_Icarus_Extended_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/claudio.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House </span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m112
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Otto Knows - Million Sweet Voices (Claudio Lari Bootleg)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m112" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m112"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>01</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Claudio Lari</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Million Sweet Voices (Mashup)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This brilliant bootleg is exclusive to Audible Coffee! The vocals from the Temper Traps' famous "Sweet Disposition" are used to make a good original great. Pure genius.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m112" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Otto_Knows_Million_Sweet_Voices_Claudio_Lari_Bootleg.ogg'}" href="../mp3/Otto_Knows_Million_Sweet_Voices_Claudio_Lari_Bootleg.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square dance">
+    <!-- DJ Picture -->
+    <img src="../pictures/wideboys.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m111
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Erick Morillo - Elephant feat. Alexandra Burke (Wideboys Club Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m111" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m111"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>01</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Wideboys</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Elephant (Club Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This track has it all! Emotionally-charged pop vocals, electro-based verses, and big-room "trouse" choruses. Another very solid song discovered by Jason of the USA.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m111" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Alexandra_Burke_Feat_Erick_Morillo_Elephant_Wideboys_Club_Mix.ogg'}" href="../mp3/Alexandra_Burke_Feat_Erick_Morillo_Elephant_Wideboys_Club_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/ferry1.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m110
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Ferry Corsten, Pierre In The Air - Walk on Air feat. Amba Shepard (Album Edit)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m110" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m110"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Mar</br>01</span></div>
+    		    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Ferry Corsten & Pierre In The Air</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Walk on Air (Album Edit)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">This track is very light and house-esque. The soft trance synths and happy melody are a perfect match for Amba Shepard's vocals. The pleasure of hearing this track is enhanced by the lyrics as well.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m110" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Walk_on_Air_feat_Amba_Shepard_Album_Edit.ogg'}" href="../mp3/Walk_on_Air_feat_Amba_Shepard_Album_Edit.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square drumandbass">
+    <!-- DJ Picture -->
+    <img src="../pictures/relay.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Drum & Bass</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m109
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Andain - Much Too Much (Relay and Front Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m109" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m109"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>28</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Relay & Front</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Much Too Much (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This track flows beautifully and deep with instruments, such as piano and guitar, that compliment Andain's stunning voice perfectly. Thanks go to Bence from Hungary for this masterpiece.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m109" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Andain_Much_Too_Much_Relay_and_Front_Remix.ogg'}" href="../mp3/Andain_Much_Too_Much_Relay_and_Front_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square electrohouse">
+    <!-- DJ Picture -->
+    <img src="../../pictures/ravergirl17.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Electro House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m108
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Kaskade - Move For Me (Blacklights Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m108" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m108"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>28</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Blacklights</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Move For Me (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This modern take on Kaskade's classic is pure fun and entertainment. Unlike many new complex electro songs, this track is never harsh and remains pleasant from start to finish. Thanks go to Jason.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m108" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../../mp3/Kaskade_Move_For_Me_Blacklights_Remix.ogg'}" href="../../mp3/Kaskade_Move_For_Me_Blacklights_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../../pictures/dinka1.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m107
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Dinka - Purple (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m107" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m107"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>26</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Dinka</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Purple (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Dinka takes her signature ear-pleasing, progressive sound and makes it even more cheerful by adding a big-room influenced chord progression in the chorus. The result is pure happiness.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m107" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../../mp3/Dinka_Purple_Original_Mix.ogg'}" href="../../mp3/Dinka_Purple_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../../pictures/ravergirl16.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m106
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Johan Vilborg, Seven Palmberg - She Made Me Smile (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m106" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m106"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>26</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Johan Vilborg & Seven Palmberg</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">She Made Me Smile (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">This track consists of equal parts trance and house with its sweeping synths and airy, progressive melodies. This one is easy-on-the-ears, but never becomes boring. Thanks go to AYNE for sharing it.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m106" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../../mp3/Johan_Vilborg_She_Made_Me_Smile_Original_Mix.ogg'}" href="../../mp3/Johan_Vilborg_She_Made_Me_Smile_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/cosmicgate.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m105
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Emma Hewitt - Colours (Cosmic Gate Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m105" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m105"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>26</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Cosmic Gate</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Colours (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Emma Hewitt is one of the best singers in the EDM domain and this track proves it. Furthermore, Cosmic Gate continue to show their dominance at creating edgy bass lines and mesmerizing melodies.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m105" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Emma_Hewitt_Colours_Cosmic_Gate_Remix.ogg'}" href="../mp3/Emma_Hewitt_Colours_Cosmic_Gate_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/starkillers.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m104
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Starkillers - Keep It Coming feat. Nadia Ali (Starkillers and Richard Beynon Epic Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m104" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m104"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>25</span></div>
+    		    		
+    		<h1 class="smallname">Starkillers & Richard Beynon</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Keep It Coming (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">This track gives Basto's remix some serious competition. The chorus might not be cohesive with the rest of the track, but it's so solid that it doesn't much matter. This is big-room at its purest.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m104" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Starkillers_Nadia_Ali_Keep_It_Coming_Starkillers_and_Richard_Beynon_Epic_Mix.ogg'}" href="../mp3/Starkillers_Nadia_Ali_Keep_It_Coming_Starkillers_and_Richard_Beynon_Epic_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/tonyjr.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m103
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Starkillers - Keep It Coming feat. Nadia Ali (Tony Junior Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m103" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m103"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>25</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Tony Junior</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Keep It Coming (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Overall, this remix is the best rendition of the original. The chorus may lack some excitement, but it compliments the general mood of the track nicely.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m103" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Starkillers_Nadia_Ali_Keep_It_Coming_Tony_Junior_Remix.ogg'}" href="../mp3/Starkillers_Nadia_Ali_Keep_It_Coming_Tony_Junior_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/vanblock1.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m102
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Coldplay - Charlie Brown (Arnar Ingason Bootleg Mix)(Van Block Edit)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m102" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m102"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>24</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Van Block</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Charlie Brown (Edit)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>For some reason, Coldplay's originals sound amazing when remixed using a big-room style. This particular gem has a heart-pounding chorus, which the edit utilizes to its fullest potential.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m102" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Coldplay_Charlie_Brown_Arnar_Ingason_Bootleg_Mix_Van_Block_Edit.ogg'}" href="../mp3/Coldplay_Charlie_Brown_Arnar_Ingason_Bootleg_Mix_Van_Block_Edit.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/dmad.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m101
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=LTN - Ordinary People (D Mad Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m101" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m101"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>24</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>D Mad</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Ordinary People (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The sweeping synths are so large that they will engulf you, but have no fear because the vocals and subtle melody will save you from suffocation. The pitch-bent bass adds even more power.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m101" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/LTN_Ordinary_People_D_Mad_Remix.ogg'}" href="../mp3/LTN_Ordinary_People_D_Mad_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl15.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m100
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Elix - Music Is My Therapy (Club Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m100" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m100"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>24</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Elix</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Music Is My Therapy (Club Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The bass, melody, and vocals that are introduced before the drop are perfect compliments to each other. Speaking of the vocals, they will undoubtedly touch the hearts of EDM fans everywhere. </h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m100" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Elix_Music_Is_My_Therapy_Club_Mix.ogg'}" href="../mp3/Elix_Music_Is_My_Therapy_Club_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+	<div class="square dutchhouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/tonic.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dutch House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m99
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=The Sleepover, Prendii - Bitch Please (Tonic Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m99" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m99"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>24</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Tonic</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Bitch Please (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The name implies it all. This song is mean. The bleepy chorus, filthy bass line, and bitchy spoken-word vocals create a track full of attitude that is sure to promote raging.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m99" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/The_Sleepover_Prendii_Bitch_Please_Tonic_Remix.ogg'}" href="../mp3/The_Sleepover_Prendii_Bitch_Please_Tonic_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+<div class="square electrohouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/creepers.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Electro House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m98
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Sandern Van Doorn, Laidback Luke - Who's Wearing The Cap (Creepers Gonna Creep Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m98" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m98"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>24</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Creepers Gonna Creep</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Who's Wearing the Cap (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Tremendous big-room stabs meet a disgustingly fat bass line. The result is quality electro house that is simple, yet effective.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m98" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Sandern_Van_Doorn_and_Laidback_Luke_Whos_Wearing_The_Cap_Creepers_Gonna_Creep_Remix.ogg'}" href="../mp3/Sandern_Van_Doorn_and_Laidback_Luke_Whos_Wearing_The_Cap_Creepers_Gonna_Creep_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+	<div class="square dubstep">
+    <!-- DJ Picture -->
+    <img src="../pictures/savoy.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dubstep</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m97
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Savoy - Diy (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m97" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m97"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>23</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Savoy</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Diy (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The melody within this track is absolutely unreal and Savoy chose the perfect sound to reproduce it. Even the way it's weaved into the copious amount of wobble is brilliant.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m97" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Savoy_Diy_Original_Mix.ogg'}" href="../mp3/Savoy_Diy_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/mrfluff.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m96
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Adam Cooper - Let It Go feat. Alexander Amado Johnson (Mr. Fluff Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m96" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m96"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>23</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Mr. Fluff</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Let It Go (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This song's organ-based chord progression pairs nicely with its electro bass. The veiled vocals act as the icing on this progressive electro cake. Props yet again to Jason for sending this our way.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m96" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Let_It_Go_feat_Alexander_Amado_Johnson_Mr_Fluff_Remix.ogg'}" href="../mp3/Let_It_Go_feat_Alexander_Amado_Johnson_Mr_Fluff_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/sied.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	        	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m95
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Sied van Riel - The Offering feat. Betsie Larkin (Extended Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m95" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m95"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>23</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Sied van Riel</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>The Offering (Extended Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Somehow this deep trance burner manages to build upon an overwhelming bass line in a very progressive manner until you are fully hypnotized by the final drop's melody.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m95" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Betsie_Larkin_and_Sied_Van_Riel_The_Offering_Extended_Mix.ogg'}" href="../mp3/Betsie_Larkin_and_Sied_Van_Riel_The_Offering_Extended_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/davidjones.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m94
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Yohann Mills - Satisfied (Feelin' Now) feat. Pierre H. (David Jones Vs 7Tales Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m94" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m94"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>23</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>David Jones & 7Tales</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Satisfied (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Once the first ninety seconds have elapsed, this song reveals several impressive sections. They might be incohesive at times, but it doesn't matter once the chorus is introduced via the main drop.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m94" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Yohann_Mills_Satisfied_Feelin_Now_feat_Pierre_H_David_Jones_vs_7Tales_Remix.ogg'}" href="../mp3/Yohann_Mills_Satisfied_Feelin_Now_feat_Pierre_H_David_Jones_vs_7Tales_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square drumandbass">
+    <!-- DJ Picture -->
+    <img src="../pictures/fredv.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Drum & Bass</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m93
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Little Nancy, Daddy's Groove - It's Not Right, But Its Okay (Fred V and Grafix Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m93" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m93"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>23</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Fred V & Grafix</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>It's Not Right, But It's Okay (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>The tempo suits Whitney Houston's classic vocals very well. Other notable attributes include a bell-based melody, stuttering electro stabs, and a bass line that extends below audible frequencies.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m93" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Whitney_Houston_Its_Not_Right_But_Its_Okay_Fred_V_and_Grafix_Remix.ogg'}" href="../mp3/Whitney_Houston_Its_Not_Right_But_Its_Okay_Fred_V_and_Grafix_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/hohme.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m92
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Morgan Page - Fight For You (Odmark and HOHME Bootleg Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m92" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m92"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>22</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>HOHME & Odmark</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Fight For You (Bootleg)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>This remix rivals Beltek's for the greatest rendition of "Fight for You" with its smoothly progressive verses, emotional breakdowns, and big-room choruses.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m92" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Morgan_Page_Fight_For_You_Odmark_and_HOHME_Bootleg_Remix.ogg'}" href="../mp3/Morgan_Page_Fight_For_You_Odmark_and_HOHME_Bootleg_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/vanblock.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m91
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Fast Distance and Dimension - Promise You feat. Cami (Van Block Edit)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m91" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m91"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>22</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Van Block</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Promise You (Edit)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>A banging electro intro yields to the most beautiful vocal break-down ever heard. An honest-to-God angel is featured as the vocalist, which is fitting given that the drop is heavenly as well.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m91" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Fast_Distance_and_Dimension_Promise_You_feat_Cami_Van_Block_Edit.ogg'}" href="../mp3/Fast_Distance_and_Dimension_Promise_You_feat_Cami_Van_Block_Edit.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl13.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m90
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Carl Glennfalk - Spectrum (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m90" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m90"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>22</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Carl Glennfalk</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Spectrum (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>If you thought Levels-inspired melodies were played out, think again. This track conveys pure emotion in the simplest of ways with a melody that would make Avicii smile. Discovered by Jason.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m90" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Carl_Glennfalk_Spectrum_Original_Mix.ogg'}" href="../mp3/Carl_Glennfalk_Spectrum_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+	<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl14.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m89
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Gaby Dershin - Deconstructed feat. Delchick (Man Of Goodwill and Pierre Thery Remix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m89" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m89"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>21</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Man Of Goodwill & Pierre Thery</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Deconstructed (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">A deep and melodic journey that is enjoyable to very end, this is a true vocal progressive house masterpiece. Audible Coffee thanks Jason for yet another awe-inspiring submission.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m89" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Gaby_Dershin_feat_Delchick_Deconstructed_Man_Of_Goodwill_and_Pierre_Thery_Remix.ogg'}" href="../mp3/Gaby_Dershin_feat_Delchick_Deconstructed_Man_Of_Goodwill_and_Pierre_Thery_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+	
+<div class="square electrohouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/themoogs.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Electro House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m88
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Michael Calfan - Resurrection (The Moogs Remix)					
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m88" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m88"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>21</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>The Moogs</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Resurrection (Remix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>What do you get when you add some wobble and buzzing bass to an original banger? An even better banger of course! Props to AYNE for this one.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m88" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Michael_Calfan_Resurrection_THE_MOOGS_Remix.ogg'}" href="../mp3/Michael_Calfan_Resurrection_THE_MOOGS_Remix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square techhouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/ravergirl12.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Tech House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m87
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Claptone - Cream (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m87" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m87"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>21</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Claptone</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Cream (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Would you like some cream with your coffee? The bassline is silky smooth as is the piano melody and violin, which complete the serenity of this decaffeinated blend. Another gem found on AYNE.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m87" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Claptone_Cream_Original_Mix.ogg'}" href="../mp3/Claptone_Cream_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/bjornberg.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m86
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Bjornberg - Libella (Original Mix) 
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m86" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m86"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>21</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Bjornberg</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Libella (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Here is yet more evidence in support of the argument that Swedes produce the best big-room tracks. The melody within the breakdown is enough to make this track a hit, and the drop is pure power.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m86" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Bjornberg_Libella_Original_Mix.ogg'}" href="../mp3/Bjornberg_Libella_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/garethemery.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m85
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Gareth Emery - Concrete Angel feat. Christina Novelli (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m85" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m85"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>20</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Gareth Emery</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Concrete Angel (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Emotionally charged vocals meet yet another amazing Garuda-style melody. This one only gets better with each listen.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m85" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Gareth_Emery_feat_Christina_Novelli_Concrete_Angel_Original_Mix.ogg'}" href="../mp3/Gareth_Emery_feat_Christina_Novelli_Concrete_Angel_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+<div class="square trance">
+    <!-- DJ Picture -->
+    <img src="../pictures/antillas.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Trance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m84
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Antillas - Damaged feat. Fiora (Radio Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m84" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m84"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>20</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Antillas</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Damaged (Radio Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>If Trouse, or "housey" trance, was a genre, this song would be a shining example of it. The vocals are perfectly utilized within the blend of big-room chords and subtle trance elements. Delicious.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m84" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Damaged_feat_Fiora_Radio_Mix.ogg'}" href="../mp3/Damaged_feat_Fiora_Radio_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+	<div class="square progressivehouse">
+    <!-- DJ Picture -->
+    <img src="../pictures/michaelwoods.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m83
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Michael Woods - Airborne (Original Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m83" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m83"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>20</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Michael Woods</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Airborne (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>An epic progressive house song gets better with each passing second, which is exactly the case with this track. The entire song builds up to a climatic main drop that is powerful, deep, and melodic.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m83" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Michael_Woods_Airborne_Original_Mix.ogg'}" href="../mp3/Michael_Woods_Airborne_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/jackholiday.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Big Room Progressive House</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m82
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Jack Holiday and Mike Candys - Children 2012 (Original Higher Level Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m82" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m82"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>19</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1 class="smallname">Jack Holiday & Mike Candys</h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="smalltitle">Children 2012 (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<div class="smalldesc">One of the most famous piano riffs just got better. This is a masterful big-room rendition of a classic and the chord progression inspired by Avicii's "Levels" is awesome once again.</div> 
+    		    
+    		    <div class="smallbuttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m82" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Jack_Holiday_Mike_Candys_Children_2012_Original_Higher_Level_Mix.ogg'}" href="../mp3/Jack_Holiday_Mike_Candys_Children_2012_Original_Higher_Level_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+	
+<div class="square dance">
+    <!-- DJ Picture -->
+    <img src="../pictures/myon.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Dance</span>
+    	    </div>
+    	    <div class="social">
+				<div class="facebook">
+					<a href="http://www.facebook.com/sharer.php?s=100
+					&p[url]=http://www.audiblecoffee.com/singles/m81
+					&p[images][0]=http://www.audiblecoffee.com/img/logo.jpg
+					&p[title]=Jessie J - Domino (Myon and Shane 54 Club Mix)
+					&p[summary]=Served on Audible Coffee" 
+					target="_blank">
+					<div class="fab_button"></div>
+					</a>
+				</div>
+			
+				
+				<div class="twitter">
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Served on Audible Coffee www.audiblecoffee.com/singles/m81" 
+					target="_blank"><div class="twi_button"></div></a>
+				</div>
+				
+				<div class="email">
+					<a href="mailto:?subject=Check out Audible Coffee&body=www.audiblecoffee.com/singles/m81"><div class="email_button"></div></a>
+				</div>
+				
+			</div>
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		
+    		<div class="datespace"><span class="date">Feb</br>19</span></div>
+    		
+    		<!-- DJ Name -->
+    		<h1>Myon & Shane54</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Domino (Club Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Crowd-pleasing pop lyrics meet a danceable beat with masterfully crafted progressive elements. This one is sure to please ears everywhere.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m81" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Jessie_J_Domino_Myon_Shane_54_Club_Mix.ogg'}" href="../mp3/Jessie_J_Domino_Myon_Shane_54_Club_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+	
+	
+</div> <!--Container-->
+
+
+</div> <!--thegoods-->
+
+
+
+<nav id="page_nav">
+    <a href="page2.html"></a>
+</nav>
+
+<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="../inc/jquery.232fd31.min.js"></script>
+	<script src="../inc/debug.js"></script>
+	<script src="../inc/jquery.scrolltofile.js"></script>
+	<script type="text/javascript" src="../inc/chat.js"></script>
+	
+<script type="text/javascript">
+
+var infloadmore = false;
+
+//delay
+		jQuery(document).ready(function(){
+		delayShow();
+		});
+		
+		function delayShow() {
+		var secs = 2000;
+		setTimeout('jQuery("body").css("visibility","visible");', secs);
+		}
+		
+//checkbox 
+		$("input[name=genre]").attr("checked","checked");
+		$("input[name='genre']").imageTick({
+		custom_button: function($label) {
+		$label.hide();
+		return '<div class="my-custom-button">' + $label.text() + '</div>';
+		}
+		});
+		
+		var switched = false;
+		function revealToggle(e){
+		if (!switched) {
+		$("input[type='checkbox'],input[type='radio']").css('display', 'inline');
+		$(e).val('Hide the REAL checkboxes/radios');
+		switched = true;
+		} else {
+		$("input[type='checkbox'],input[type='radio']").css('display', 'none');
+		$(e).val('Show me the REAL checkboxes/radios');
+		switched = false;
+		}
+		//if($('.isotope-item:not(.isotope-hidden)').length < 2)
+		//{
+		//$('.container').infinitescroll('retrieve')
+		//}
+		};
+//dave
+		var $container = $('.container'),
+		$checkboxes = $('#filters input');
+		
+		$container.isotope({
+		itemSelector: '.square'
+		});
+		
+		$checkboxes.change(function(){
+		var filters = [];
+		// get checked checkboxes values
+		$checkboxes.filter(':checked').each(function(){
+		filters.push( this.value );
+		});
+		// ['.red', '.blue'] -> '.red, .blue'
+		filters = filters.join(', ') || 'none';
+		$container.isotope({ filter: filters });
+		//Now check if we have enough..
+		setTimeout(function() {
+			if($('.isotope-item:not(.isotope-hidden)').length < 4 && !$('.container').data('infinitescroll').options.state.isDone && !infloadmore)
+				{
+				infloadmore = setInterval(function() { 
+					if($('.isotope-item:not(.isotope-hidden)').length < 4 && !$('.container').data('infinitescroll').options.state.isDone)
+						{
+						$('.container').infinitescroll('retrieve');
+						}
+					else
+						{
+						clearInterval(infloadmore);
+						infloadmore = false;
+						}
+					}, 500);
+				}
+			}, 250)
+		});
+		
+		$('#shufflebuttons').toggle( 
+		function() {
+		$container.isotope('shuffle');
+		}, 
+		function() {
+		$container.isotope({ sortBy: 'original-order' });
+		});
+
+		
+		var $items = $container.children();
+		
+		// close square when close is clicked
+		function closeSquare( event ) {
+		var $this = $(this)
+		if ( $(event.target).is('a.close') ) {
+		// remove this item
+		$(event.target).siblings('.buttons').find('.audio').mb_miniPlayer_stop();
+		$container.isotope( 'remove', $this ).isotope('reLayout');
+		return false;
+		} else {
+		// select next item
+		var idx = $this.index();
+		var $filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index( this ),
+		nextIndex = ( isoIndex + 1 ) % $filteredAtoms.length;
+		
+		$items.filter('.next').removeClass('next');
+		$filteredAtoms.eq( nextIndex ).addClass('next');
+		}
+		}
+		
+		function bindSquareEvents( $items ) {
+		var $squares = $items.filter('.square');
+		// simple hover events
+		$squares.hover( function() {
+		$(this).addClass('hover')
+		}, function() {
+		$(this).removeClass('hover')
+		});
+		$squares.click( closeSquare );
+		}
+		
+		// initial bind
+		bindSquareEvents( $('.square') );
+//audio
+   		$(".audio").mb_miniPlayer({
+		width:210,
+		height:34,
+		inLine:false,
+		onEnd:playNext,
+		onPlay:playHover
+		});
+		
+		
+		var $audios = $('.audio');
+		
+		function playHover(idx,sitem){
+		$('.square').removeClass("playing");
+		boxel = $(sitem).parents(".box");
+		document.title = boxel.children("h1").text()+' - '+boxel.children("h2").text();
+		$(sitem).parents(".square").addClass("playing")	
+		$('#globalplay').css('display','none');
+		$('#globalpause').css('display','block');
+        $('#globalcontrols,#shufflebuttons').fadeIn('slow', function() {})
+        };
+	
+		function playNext(idx,sitem) {
+		var $isoItem = $(sitem).parents(".square"),
+		$filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index(  $isoItem  ),
+		
+		nextIndex = ( isoIndex + 1 ) % $filteredAtoms.length;
+		next = $filteredAtoms.eq( nextIndex ).find('.audio');
+		$("#"+"MP_"+next.attr("id")).jPlayer("stop"); 
+		next.mb_miniPlayer_play();
+		$.scrollTo( $filteredAtoms.eq( nextIndex ), 800, {over:-0.5} );
+		
+		};
+
+//IF
+		var $container = $('.container');
+		
+		$container.isotope({
+		itemSelector : '.square'
+		});
+		$container.infinitescroll({
+		navSelector  : '#page_nav',    // selector for the paged navigation 
+		nextSelector : '#page_nav a',  // selector for the NEXT link (to page 2)
+		itemSelector : '.square',     // selector for all items you'll retrieve
+		animate : false
+		},function( newElements ) {
+		var $newElements = $(newElements);
+		
+		$newElements.find(".audio").mb_miniPlayer({
+		width:210,
+		height:34,
+		inLine:false,
+		onEnd:playNext,
+		onPlay:playHover
+		});
+		
+		// add hover events for new items
+		bindSquareEvents( $newElements );
+		setTimeout(function() {
+		$container.isotope('insert', $newElements );
+		}, 1000);
+		});
+//genre
+		$('#toggle').toggle( 
+		function() {
+		$('#filters').animate({ left: 4 }, 'slow', function() {
+		});
+		}, 
+		function() {
+		$('#filters').animate({ left: -259 }, 'slow', function() {
+		});
+		});
+		
+//shuffle
+		$('#shufflebuttons').toggle( 
+		function() {
+		$('#original-order, .onshuffle').css('display','block');
+		$('#shuffle, .offshuffle').css('display','none');
+		}, 
+		function() {
+		$('#original-order, .onshuffle').css('display','none');
+		$('#shuffle, .offshuffle').css('display','block');
+		});
+		
+//global
+		
+		function playPrevious(idx,sitem) {
+		ID = $('.playing').find('.audio').attr("id");
+		var $isoItem = $(sitem).parents(".square"),
+		$filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index(  $isoItem  ),
+		
+		nextIndex = ( isoIndex - 1 ) % $filteredAtoms.length;
+		$("#"+"MP_"+ID).jPlayer("stop"); 
+		next = $filteredAtoms.eq( nextIndex ).find('.audio');
+		$("#"+"MP_"+next.attr("id")).jPlayer("stop"); 
+		next.mb_miniPlayer_play();
+		$.scrollTo( $filteredAtoms.eq( nextIndex ), 800, {over:-0.5} );
+		};
+		
+//global down
+		
+		function playDown(idx,sitem) {
+		ID = $('.playing').find('.audio').attr("id");
+		var $isoItem = $(sitem).parents(".square"),
+		$filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index(  $isoItem  ),
+		
+		nextIndex = ( isoIndex + 4 ) % $filteredAtoms.length;
+		$("#"+"MP_"+ID).jPlayer("stop"); 
+		next = $filteredAtoms.eq( nextIndex ).find('.audio');
+		$("#"+"MP_"+next.attr("id")).jPlayer("stop"); 
+		next.mb_miniPlayer_play();
+		$.scrollTo( $filteredAtoms.eq( nextIndex ), 800, {over:-0.5} );
+		};
+
+//global up
+		
+		function playUp(idx,sitem) {
+		ID = $('.playing').find('.audio').attr("id");
+		var $isoItem = $(sitem).parents(".square"),
+		$filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index(  $isoItem  ),
+		
+		nextIndex = ( isoIndex - 4 ) % $filteredAtoms.length;
+		$("#"+"MP_"+ID).jPlayer("stop"); 
+		next = $filteredAtoms.eq( nextIndex ).find('.audio');
+		$("#"+"MP_"+next.attr("id")).jPlayer("stop"); 
+		next.mb_miniPlayer_play();
+		$.scrollTo( $filteredAtoms.eq( nextIndex ), 800, {over:-0.5} );
+		};
+
+		
+//global back
+		$('#globalback').click(function() { playPrevious(0,$('.playing .box')); });
+	
+//global forward		
+		$('#globalforward').click(function() { 
+		ID = $('.playing').find('.audio').attr("id");
+		$("#"+"MP_"+ID).jPlayer("stop");
+		playNext(0,$('.playing .box'));
+		});
+		
+//global arrow back		
+		$(document).keydown(function(e){
+		if (e.keyCode == 37) { 
+		playPrevious(0,$('.playing .box'));
+		return false;
+		}
+		});
+		
+//global arrow forward
+		$(document).keydown(function(e){
+		if (e.keyCode == 39) { 
+		ID = $('.playing').find('.audio').attr("id");
+		$("#"+"MP_"+ID).jPlayer("stop");
+		playNext(0,$('.playing .box'));
+		return false;
+		}
+		});
+		
+//global spacebar play/pause
+		window.onkeydown = function(e) { 
+		$('.playing').find('.play').click();
+		return !(e.keyCode == 32);
+		};
+		
+//global arrow down
+		$(document).keydown(function(e){
+		if (e.keyCode == 40) { 
+		playDown(0,$('.playing .box'));
+		return false;
+		}
+		});
+		
+//global arrow up
+		$(document).keydown(function(e){
+		if (e.keyCode == 38) { 
+		playUp(0,$('.playing .box'));
+		return false;
+		}
+		});
+
+//global play/pause (button toggle)		
+		$('#globalplaypause').toggle( 
+		function() {
+		$('#globalplay').css('display','none');
+		$('#globalpause').css('display','block');
+		$('.playing').find('.play').click();
+		}, 
+		function() {
+		$('#globalplay').css('display','block');
+		$('#globalpause').css('display','none');
+		$('.playing').find('.play').click();
+		});
+	
+//global play/pause (button toggle)		
+		$('.play').toggle( 
+		function() {
+		$('#globalplay').css('display','none');
+		$('#globalpause').css('display','block');
+		}, 
+		function() {
+		$('#globalplay').css('display','block');
+		$('#globalpause').css('display','none');
+		});
+
+//Whats your roast color change		
+		$("#roastbutton").hover(function(){
+		$("#filters h5").css('color', '#f710ef');
+		}, function(){
+		$("#filters h5").css('color', 'white');
+		});
+		
+//chattoggle
+		$('#chattoggle').toggle( 
+		function() {
+		$('#chatheader').animate({ right: 4 }, 'slow', function() {
+		});
+		}, 
+		function() {
+		$('#chatheader').animate({ right: -313 }, 'slow', function() {
+		});
+		});
+		
+//social Toggle
+
+$(".twittab").mouseenter(showNav).mouseleave(hideNav);
+
+function showNav(){  
+    $('#googfaceblack').stop().animate({ left: 174 }, 'slow')};
+function hideNav(){  
+    $('#googfaceblack').stop().animate({ left: 27 }, 'slow')};
+		
+		
+		$('.gogplustab').hover( 
+		function() {
+		$('#faceblack').stop().animate({ left: 174 }, 'slow', function() {
+		});
+		}, 
+		function() {
+		$('#faceblack').stop().animate({ left: 32 }, 'slow', function() {
+		});
+		});
+		
+		$('.fbooktab').hover( 
+		function() {
+		$('#black').stop().animate({ left: 174 }, 'slow', function() {
+		});
+		}, 
+		function() {
+		$('#black').stop().animate({ left: 30 }, 'slow', function() {
+		});
+		});
+		
+// CHAT 
+// ask user for name with popup prompt    
+        var name = prompt("Enter your chat name:", "Guest");
+        
+        // default name is 'Guest'
+    	if (!name || name === ' ') {
+    	   name = "Guest";	
+    	}
+    	
+    	// strip tags
+    	name = name.replace(/(<([^>]+)>)/ig,"");
+    	
+    	// display name on page
+    	$("#name-area").html("You are: <span>" + name + "</span>");
+    	
+    	// kick off chat
+        var chat =  new Chat();
+    	$(function() {
+    	
+    		 chat.getState(); 
+    		 
+    		 // watch textarea for key presses
+             $("#sendie").keydown(function(event) {  
+             
+                 var key = event.which;  
+           
+                 //all keys including return.  
+                 if (key >= 33) {
+                   
+                     var maxLength = $(this).attr("maxlength");  
+                     var length = this.value.length;  
+                     
+                     // don't allow new content if length is maxed out
+                     if (length >= maxLength) {  
+                         event.preventDefault();  
+                     }  
+                  }  
+    		 																																																});
+    		 // watch textarea for release of key press
+    		 $('#sendie').keyup(function(e) {	
+    		 					 
+    			  if (e.keyCode == 13) { 
+    			  
+                    var text = $(this).val();
+    				var maxLength = $(this).attr("maxlength");  
+                    var length = text.length; 
+                     
+                    // send 
+                    if (length <= maxLength + 1) { 
+                     
+    			        chat.send(text, name);	
+    			        $(this).val("");
+    			        
+                    } else {
+                    
+    					$(this).val(text.substring(0, maxLength));
+    					
+    				}	
+    				
+    				
+    			  }
+             });
+            
+    	});
+
+</script>        
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27304177-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  
+	
+</body>
+</html>
+
