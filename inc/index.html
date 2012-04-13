@@ -1,0 +1,326 @@
+<!doctype html>
+
+<head>
+    <title>Congratulations!</title>
+    <meta name="description" content="AudibleCoffee.com is the best place to discover and listen to EDM. Period."/>
+
+
+    <meta property="og:title" content="Audible Coffee" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://www.audiblecoffee.com/img/logo.jpg" />
+	<meta property="fb:admins" content="184905639" />
+	<meta property="og:description" content="AudibleCoffee.com is the best place to discover and listen to EDM. Period."/>
+	
+	<link rel="image_src" href="http://www.audiblecoffee.com/img/logo.jpg"/>
+	<link rel="icon" href="../../../img/Large_Mug.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="../../img/Large_Mug.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" type="text/css" href="../css/layoutsecret.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="../css/miniplayertest.css"/>
+ 	<link rel="stylesheet" href="../css/puzzle.css"/>
+ 
+ 	
+</head>
+
+<style type="text/css">
+  .square h1 { color: #a3a8a4; }
+  .square.hover h1 { color: #f710ef; }
+  .square.playing h1 { color: #f710ef; }
+  
+  .square h2 { color: #a3a8a4; }
+  .square.hover h2 { color: white; }
+  .square.playing h2 { color: white; }
+  
+  .square .smallname { color: #a3a8a4; }
+  .square.hover .smallname { color: #f710ef; }
+  .square.playing .smallname { color: #f710ef; }
+  
+  .square .smalltitle { color: #a3a8a4; }
+  .square.hover .smalltitle { color: white; }
+  .square.playing .smalltitle { color: white; }
+  
+  .square.hover .img1 { opacity: 0.5; }
+  .square.hover .background { opacity: 0.9; }
+  .square.playing .img1 { opacity: 0.5; }
+  .square.playing .background { opacity: 0.9; }
+
+  .square .box { height: 50px; opacity: 0.7; }
+  .square.hover .box { height: 160px; opacity: 0.8; }
+  .square.playing .box { height: 160px; opacity: 0.8; }
+  
+  .square .close,
+  .square .boxtop { display: none; }
+  .square.hover .close,
+  .square.hover .boxtop { display: block; }
+  .square.playing .close,
+  .square.playing .boxtop { display: block; }
+</style>
+
+<style type="text/css">
+body{background-color: black;
+	 font-family: 'Quattrocento Sans', sans-serif; 
+	 font-weight: 100;}
+	 
+#container{position: relative;
+			margin-left: auto;
+			margin-right:auto;
+			display: block;
+			width:800px;
+			top:20px;}
+
+p{color:#848484;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px}
+  
+.genretitle{font-size: 20px;
+			color:#f710ef;
+			letter-spacing: 1.5px;}
+			
+.description{color:#848484;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			position: relative;
+			left:0px;
+			margin-left: 320px;
+			top: -311px;}
+			
+#logo {
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 27px;
+display: block;
+width: 500px;
+height: 140px;
+left: -30px;
+top: 0px;
+}
+
+.examples{height: 350px;}
+   
+
+</style>
+
+
+<body>
+
+
+<div id="container">
+<img src="../img/AC_LOGO-Rasterized.png" id="logo" />
+
+<div class="examples">
+<div class="square bigroom">
+    <!-- DJ Picture -->
+    <img src="../pictures/deadmau51.jpg" class="img1" />
+    		<div class="boxtop">
+    	    <span class="genre">Progressive House</span>
+    	    </div>
+    	    
+    		<div class="box">
+    		<a class="close" href="#close">&times;</a>
+    		<!-- DJ Name -->
+    		<h1>Deadmau5</h1>
+    		
+    		<!-- Song Title -->
+    		<h2>Strobe (Original Mix)</h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4>Deadmau5's early productions opened our eyes to the subtle beauty of progressive house. This track is the epitome of Joel's work and it might be the best progressive song ever heard by human ears.</h4> 
+    		    
+    		    <div class="buttons">
+    		    <!--Song file info-->
+    			<div class="player">
+				<a id="m114" class="audio {skin:'#010101',showVolumeLevel:false,showTime:true,showRew:false,ogg:'../mp3/Strobe_Original_Mix.ogg'}" href="../mp3/Strobe_Original_Mix.mp3"></a></div>
+					
+				</div>
+			</div>
+	</div>
+
+
+</div>
+
+<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="../inc/jquery.232fd31.min.js"></script>
+	<script src="../inc/debug.js"></script>
+	
+<script type="text/javascript">
+
+//delay
+		jQuery(document).ready(function(){
+		delayShow();
+		});
+		
+		function delayShow() {
+		var secs = 2000;
+		setTimeout('jQuery("body").css("visibility","visible");', secs);
+		}
+		
+//checkbox 
+		$("input[name='genre']").imageTick({
+		custom_button: function($label) {
+		$label.hide();
+		return '<div class="my-custom-button">' + $label.text() + '</div>';
+		}
+		});
+		
+		var switched = false;
+		function revealToggle(e){
+		
+		if (!switched) {
+		$("input[type='checkbox'],input[type='radio']").css('display', 'inline');
+		$(e).val('Hide the REAL checkboxes/radios');
+		switched = true;
+		} else {
+		$("input[type='checkbox'],input[type='radio']").css('display', 'none');
+		$(e).val('Show me the REAL checkboxes/radios');
+		switched = false;
+		}
+		};
+//dave
+		var $container = $('.container'),
+		$checkboxes = $('#filters input');
+		
+		$container.isotope({
+		itemSelector: '.square'
+		});
+		
+		$checkboxes.change(function(){
+		var filters = [];
+		// get checked checkboxes values
+		$checkboxes.filter(':checked').each(function(){
+		filters.push( this.value );
+		});
+		// ['.red', '.blue'] -> '.red, .blue'
+		filters = filters.join(', ') || 'none';
+		$container.isotope({ filter: filters });
+		});
+		
+		$('#shufflebuttons').toggle( 
+		function() {
+		$container.isotope('shuffle');
+		}, 
+		function() {
+		$container.isotope({ sortBy: 'original-order' });
+		});
+		
+		var $items = $container.children();
+		
+		// close square when close is clicked
+		function closeSquare( event ) {
+		var $this = $(this)
+		if ( $(event.target).is('a.close') ) {
+		// remove this item
+		$(event.target).siblings('.buttons').find('.audio').mb_miniPlayer_stop();
+		$container.isotope( 'remove', $this ).isotope('reLayout');
+		return false;
+		} else {
+		// select next item
+		var idx = $this.index();
+		var $filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index( this ),
+		nextIndex = ( isoIndex + 1 ) % $filteredAtoms.length;
+		
+		$items.filter('.next').removeClass('next');
+		$filteredAtoms.eq( nextIndex ).addClass('next');
+		}
+		}
+		
+		function bindSquareEvents( $items ) {
+		var $squares = $items.filter('.square');
+		// simple hover events
+		$squares.hover( function() {
+		$(this).addClass('hover')
+		}, function() {
+		$(this).removeClass('hover')
+		});
+		$squares.click( closeSquare );
+		}
+		
+		// initial bind
+		bindSquareEvents( $('.square') );
+//audio
+   		$(".audio").mb_miniPlayer({
+		width:210,
+		height:34,
+		inLine:false,
+		onEnd:playNext,
+		onPlay:playHover
+		});
+		
+		
+		var $audios = $('.audio');
+		
+		function playHover(idx,sitem){
+		$('.square').removeClass("playing");
+		$(sitem).parents(".square").addClass("playing")	
+		}
+		function playNext(idx,sitem) {
+		var $isoItem = $(sitem).parents(".square"),
+		$filteredAtoms = $container.data('isotope').$filteredAtoms,
+		isoIndex = $filteredAtoms.index(  $isoItem  ),
+		
+		nextIndex = ( isoIndex + 1 ) % $filteredAtoms.length;
+		$filteredAtoms.eq( nextIndex ).find('.audio').mb_miniPlayer_play();
+		};
+
+//IF
+		var $container = $('.container');
+		
+		$container.isotope({
+		itemSelector : '.square'
+		});
+		$container.infinitescroll({
+		navSelector  : '#page_nav',    // selector for the paged navigation 
+		nextSelector : '#page_nav a',  // selector for the NEXT link (to page 2)
+		itemSelector : '.square',     // selector for all items you'll retrieve
+		animate : false,
+		debug : true,
+		},function( newElements ) {
+		var $newElements = $(newElements);
+		
+		$newElements.find(".audio").mb_miniPlayer({
+		width:210,
+		height:34,
+		inLine:false,
+		onEnd:playNext,
+		onPlay:playHover
+		});
+		
+		// add hover events for new items
+		bindSquareEvents( $newElements );
+		setTimeout(function() {
+		$container.isotope('insert', $newElements );
+		}, 1000);
+		});
+//genre
+		$('#toggle').toggle( 
+		function() {
+		$('#filters').animate({ left: 4 }, 'slow', function() {
+		});
+		}, 
+		function() {
+		$('#filters').animate({ left: -259 }, 'slow', function() {
+		});
+		});
+		
+//shuffle
+		$('#shufflebuttons').toggle( 
+		function() {
+		$('#original-order, .onshuffle').css('display','block');
+		$('#shuffle, .offshuffle').css('display','none');
+		}, 
+		function() {
+		$('#original-order, .onshuffle').css('display','none');
+		$('#shuffle, .offshuffle').css('display','block');
+		});
+		
+//global
+		$('.globaltoggle').click(function() { 
+		$('.playing').find('.play').click();
+		});
+
+</script>    
+</body>
+</html>
