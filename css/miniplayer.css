@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'mb_audio_fontRegular';
+  src: url('mbAudioFont/mb_audio_font.eot?#iefix') format('embedded-opentype'),
+       url('mbAudioFont/mb_audio_font.woff') format('woff'),
+       url('mbAudioFont/mb_audio_font.ttf')  format('truetype'),
+       url('mbAudioFont/mb_audio_font-webfont_svg#webfontywr4YLri') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DroidSansMonoRegular';
+  src: url('DroidSansMono/DroidSansMono.eot?#iefix') format('embedded-opentype'),
+       url('DroidSansMono/DroidSansMono.woff') format('woff'),
+       url('DroidSansMono/DroidSansMono.ttf')  format('truetype'),
+       url('DroidSansMono/DroidSansMono.svg#webfontGzFJ3WpO') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mbMiniPlayer span{
+  font:16px/20px "mb_audio_fontRegular","Webdings",sans-serif;
+}
+
+a.audio{
+  display:none;
+}
+
+.mbMiniPlayer{}
+
+.mbMiniPlayer table{
+  -moz-border-radius:5px;
+  -webkit-border-radius:8px;
+  border-radius:5px;
+  margin:5px;
+}
+
+.mbMiniPlayer.shadow table{
+  border:1px solid white;
+  -moz-box-shadow:#ccc 0px 0px 5px;
+  -webkit-box-shadow:#ccc 0px 0px 5px;
+  box-shadow:#ccc 0px 0px 5px;
+}
+
+.mbMiniPlayer td{
+  margin:0;
+  padding:0px;
+  
+}
+
+.jp-progress{
+  position:relative;
+  background-color: #f710ef;
+  height:10px;
+  margin:2px;
+  margin-top:0;
+  margin-left: 20px;
+  border: white 1px;
+  top:0px;
+  -moz-box-sizing:border-box;
+  cursor:pointer;
+  width:205px;
+}
+
+.jp-progress, x:-moz-any-link {margin-top: -5px;
+							   }
+
+.jp-load-bar{
+  background-color: #f710ef;
+  height:15px;
+  -moz-box-sizing:border-box;
+  width:205px;
+}
+.jp-play-bar{
+  background-color:black;
+  height:13px;
+  top:-4px;
+  -moz-box-sizing:border-box;
+}
+
+.mbMiniPlayer td.controlsBar{
+  margin:0;
+  padding-right:0px;
+  position: relative;
+  left: 13px;
+}
+
+.mbMiniPlayer .controls{
+  margin:0px;
+  display:none;
+  width:1px;
+  height:100%;
+  position: relative;
+  top:-17px;
+}
+
+.mbMiniPlayer .controls, x:-moz-any-link {left:3px;}
+
+.mbMiniPlayer span{
+  display:inline-block;
+  padding-right:10px;
+  width:15px;
+  height:20px;
+  color:#f710ef;
+  text-align:center;
+}
+
+.mbminiplayer span.title {
+position: relative;
+color: #333;
+font: 10px/12px "DroidSansMonoRegular", sans-serif;
+text-shadow: none!important;
+letter-spacing: 1px;
+width: 100%;
+height: 6px;
+top: -8px;
+background: transparent !important;
+text-align: left;
+cursor: default !important;
+}
+
+.mbMiniPlayer span.rew{
+  width:1px;
+  cursor:pointer;
+}
+
+.mbMiniPlayer span.volumeLevel{
+}
+.mbMiniPlayer span.volumeLevel a{
+  position:relative;
+  display:none;
+  margin:0;
+  margin-right:0px;
+  border-right:1px solid rgba(0,0,0,0.4);
+  width:2px;
+  padding:0;
+  background-color:white;
+  height:0;
+  vertical-align:bottom;
+  opacity:.1;
+  cursor:pointer
+ 
+}
+
+.mbMiniPlayer span.volumeLevel a.sel{}
+
+.mbMiniPlayer span.time{
+  width:1px;
+  font:11px/20px sans-serif;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:default !important;
+  text-shadow: 0 0 2px #999!important;
+  position: relative;
+  left: -213px;
+}
+
+.mbMiniPlayer span.time, x:-moz-any-link {left:-226px;
+										  top:2px;}
+
+.mbMiniPlayer span.play{
+  -moz-border-radius:0 5px 5px 0;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-radius:0 5px 5px 0;
+  cursor:pointer;
+  padding-left: 0px;
+    zoom:200%;
+   -moz-transform: scale(2);
+   position: relative;
+  left:-7px;
+  top:0px
+  
+}
+
+.mbMiniPlayer span.play, x:-moz-any-link {padding-left: 0px;
+										  left:-10px;
+							  			 }
+.mbMiniPlayer span.volume{
+  -moz-border-radius:5px 0 0 5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  border-radius:5px 0 0 5px;
+  cursor:pointer;
+  padding-left:0px;
+  padding-right:2px;
+  display: none;
+}
+
+
