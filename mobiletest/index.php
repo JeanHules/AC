@@ -26,7 +26,6 @@ else {
 }
 ?>
 <!doctype html>
-
 <head>
 	<meta charset='utf-8'> 
     <meta http-equiv="Cache-control" content="public">
