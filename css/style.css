@@ -1,0 +1,129 @@
+
+body{ 
+	background-color: black;
+	font-family: 'Quattrocento Sans', sans-serif; 
+	font-size: 11px;
+}
+
+.chattitle{ 
+	color: #f710ef; 
+	font-weight: 100; 
+	margin: 0 0 10px 0; 
+	font-size: 27px;
+	position: relative;
+	left:9px;
+	top:-34px;
+}
+
+#page-wrap{ 
+	width: 300px; 
+	margin: 30px auto; 
+	position: relative; 
+	top:-65px;
+	z-index: 3000;
+}
+
+#chat-wrap{  
+	margin: 0 0 15px 0; 
+}
+
+#chat-area{ 
+	height: 200px; 
+	overflow: auto; 
+	border: 1px solid #f710ef; 
+	padding: 20px; 
+	background: black; 
+	border-radius: 15px;
+}
+
+#chat-area span{ 
+	color: white;  
+	padding: 4px 8px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 8px; 
+	margin: 0 5px 0 0;
+}
+
+#chat-area p{ 
+	padding: 0;
+	width: 250px;
+	color:#848484;
+}
+
+#name-area{ 
+	position: absolute; 
+	top: -28px; 
+	right: 10px; 
+	color: white; 
+	font: bold 12px "Lucida Grande", Sans-Serif; 
+	text-align: right; 
+	
+}  
+ 
+#name-area span{ 
+	color: #fa9f00;
+}
+
+#send-message-area p{ 
+	float: left;
+	color: #F710EF;
+	padding-top: 0px;
+	font-size: 14px;
+	position: relative;
+	top: -25px;
+	z-index: 1000;
+}
+
+#sendie{ 
+	border: 1px solid #f710ef;
+	width: 278px;
+	padding: 10px;
+	font: 12px "Lucida Grande", Sans-Serif;
+	float: right;
+	top: -37px;
+	position: relative;
+	background:black;
+	color:#848484;
+	border-radius: 15px;
+	
+}
+
+#sendie:focus{
+	outline: none;
+}
+
+#speech{
+	position: relative;
+	top: 8px;
+	left: -29px;
+	}
+
+#chattoggle{
+	text-align: right;
+	position: relative;
+	top: 0px;
+	right: 51px;
+	background-color: #252525;
+	height: 39px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	width: 68px;
+	cursor: default;
+	}
+	
+#chatheader{	
+		position:fixed;
+		display: inline-block;
+		right: -312px;
+		top:199px;
+		z-index: 2000;
+		background-color: #252525;
+		height: 355px;
+		border-radius: 15px;
+		width:310px;
+		cursor: default;}
+		
+#chatheader, x:-moz-any-link{height:373px;}
+		
+			
+	
