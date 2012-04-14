@@ -75,7 +75,6 @@ else {
 
 
 <div id="filters">
-<a href="http://www.audiblecoffee.com/genre/" target="_blank" id="roast"><div id="roastbutton"><h5>What's Your Roast?</h5></div></a>
 <ul>
 	<?php
 	if(!empty($genres)) {
@@ -351,7 +350,7 @@ var infloadmore = false;
 //genre
 		$('#headerbutton').toggle( 
 		function() {
-		$('.thegoods').animate({ left: 220 }, 'slow', function() {
+		$('.thegoods').animate({ left: 312 }, 'slow', function() {
 		});
 		$('#filters').animate({ left: 0 }, 'slow', function() {
 		});
@@ -359,7 +358,7 @@ var infloadmore = false;
 		function() {
 		$('.thegoods').animate({ left: 0 }, 'slow', function() {
 		});
-		$('#filters').animate({ left: -259 }, 'slow', function() {
+		$('#filters').animate({ left: -312 }, 'slow', function() {
 		});
 		});
 		
@@ -439,9 +438,13 @@ $(".square").click(function(){
 		$(".square").find(this).css('color', '#f710ef');
 		});
 		
-$("#sharelink").click(function(){
+$("#sharelink").toggle(function(){
 		$(".social").css('display', 'block');
+		}, function(){
+		$(".social").css('display', 'none');
 		});
+		
+		
 
 </script>        
 
