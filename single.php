@@ -32,7 +32,7 @@ $genreinfo = getGenre($trackinfo['GenreID']);
     <link rel="image_src" type="image/jpeg" href="http://www.audiblecoffee.com/img/logo.jpg">
 	<link rel="icon" href="/img/Large_Mug.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/img/Large_Mug.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="../css/layoutsingle.css"/>
+    <link rel="stylesheet" type="text/css" href="/singles/layoutsingle.css"/>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/miniplayer.css"/>
  	<link rel="stylesheet" href="/css/puzzle.css"/>
