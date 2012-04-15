@@ -350,7 +350,7 @@ var infloadmore = false;
 //genre
 		$('#headerbutton').toggle( 
 		function() {
-		$('.thegoods').animate({ left: 312 }, 'slow', function() {
+		$('.thegoods').animate({ left: 220 }, 'slow', function() {
 		});
 		$('#filters').animate({ left: 0 }, 'slow', function() {
 		});
@@ -358,7 +358,7 @@ var infloadmore = false;
 		function() {
 		$('.thegoods').animate({ left: 0 }, 'slow', function() {
 		});
-		$('#filters').animate({ left: -312 }, 'slow', function() {
+		$('#filters').animate({ left: -259 }, 'slow', function() {
 		});
 		});
 		
@@ -440,11 +440,10 @@ $(".square").click(function(){
 		
 $("#sharelink").toggle(function(){
 		$(".social").css('display', 'block');
-		}, function(){
-		$(".social").css('display', 'none');
 		});
-		
-		
+		}, function(){
+		$(".").css('color', 'white');
+		});
 
 </script>        
 
