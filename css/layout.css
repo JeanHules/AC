@@ -164,6 +164,8 @@ h2{
 	width:280px;
 	height:15px;
 	}
+
+h4, x:-moz-any-link {line-height: 14px;}
 		
 h4{
 	top: -38px;
@@ -531,7 +533,7 @@ display: none;
 		   display: block;}
 
 .twitcon{
-	background: url(../img/socialtabs.png)0px -113px;
+	background: url(../img/socialtabs1.png)0px -113px;
 	height: 28px;
 	width: 175px;
 	position: absolute;
@@ -540,7 +542,7 @@ display: none;
 	z-index: 3000;}
 	
 .googlecon{
-	background: url(../img/socialtabs.png)0px -144px;
+	background: url(../img/socialtabs1.png)0px -144px;
 	height: 28px;
 	width: 175px;
 	position: absolute;
@@ -550,7 +552,7 @@ display: none;
 	}
 	
 .fbookcon{
-	background: url(../img/socialtabs.png)0px 60px;
+	background: url(../img/socialtabs1.png)0px 60px;
 	height: 28px;
 	width: 174px;
 	position: absolute;
@@ -558,11 +560,11 @@ display: none;
 	left: 0px;
 	z-index: 3000;}
 	
-.gogplustab:hover .googlecon {background: url(../img/socialtabs.png)0px -53px;}
+.gogplustab:hover .googlecon {background: url(../img/socialtabs1.png)0px -53px;}
 
-.twittab:hover .twitcon {background: url(../img/socialtabs.png)0px -83px;}
+.twittab:hover .twitcon {background: url(../img/socialtabs1.png)0px -83px;}
 
-.fbooktab:hover .fbookcon {background: url(../img/socialtabs.png)0px -23px;}
+.fbooktab:hover .fbookcon {background: url(../img/socialtabs1.png)0px -23px;}
 	
 .twitterbutton{position: relative;
 			   left:31px;

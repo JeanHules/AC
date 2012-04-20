@@ -693,7 +693,7 @@ function hideNav(){
 		
 		$('.fbooktab').hover( 
 		function() {
-		$('#black').stop().animate({ left: 174 }, 'slow', function() {
+		$('#black').stop().animate({ left: 173 }, 'slow', function() {
 		});
 		}, 
 		function() {

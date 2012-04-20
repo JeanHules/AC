@@ -28,11 +28,11 @@ $genreinfo = getGenre($trackinfo['GenreID']);
 	<meta property="og:url" content="http://www.audiblecoffee.com/" />
 	<meta property="og:image" content="http://www.audiblecoffee.com/img/logo.jpg" />
 	<meta property="fb:admins" content="184905639" />
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="image_src" type="image/jpeg" href="http://www.audiblecoffee.com/img/logo.jpg">
 	<link rel="icon" href="/img/Large_Mug.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/img/Large_Mug.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/singles/layoutsingle.css"/>
+    <link rel="stylesheet" type="text/css" href="/singles/layoutmobilesingle.css"/>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/miniplayer.css"/>
  	<link rel="stylesheet" href="/css/puzzle.css"/>

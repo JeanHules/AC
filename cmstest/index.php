@@ -45,7 +45,7 @@ else {
 	<link rel="icon" href="/img/Large_Mug.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/img/Large_Mug.ico" type="image/x-icon">
     
-    <link rel="stylesheet" type="text/css" href="/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="layoutcmstest.css"/>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/miniplayertest.css"/>
  	<link rel="stylesheet" type="text/css" href="/css/puzzle.css"/>
@@ -235,6 +235,8 @@ else {
 <div id="globalplay"></div>
 <div id="globalpause"></div>
 </div>
+<div id="arrowicons"></div>
+<span class="arrowtext">Once a song is playing, use your arrows and space bar to control the music</span>
 </div>
 <div id="shufflebuttons">
 <img src="../img/shufflegrey.png" id="shuffle" class="shuffles"/>
@@ -628,6 +630,13 @@ var infloadmore = false;
 		$("#filters h5").css('color', '#f710ef');
 		}, function(){
 		$("#filters h5").css('color', 'white');
+		});
+		
+//Whats your roast color change		
+		$("#arrowicons").hover(function(){
+		$(".arrowtext").css('display', 'block');
+		}, function(){
+		$(".arrowtext").css('display', 'none');
 		});
 		
 //global arrow back

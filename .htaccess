@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^index\.html$ index.php [L]
+RewriteRule ^page([0-9]+)\.html$ index.php?page=$1 [L]
+RewriteRule ^singles/m([0-9]+)$ single.php?trackid=$1 [L]
