@@ -34,7 +34,6 @@ else {
     
     <title>Audible Coffee</title>
     
-    <meta property="og:title" content="Audible Coffee" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.audiblecoffee.com/" />
 	<meta property="og:image" content="http://www.audiblecoffee.com/img/logo1.jpg" />
@@ -45,7 +44,7 @@ else {
 	<link rel="icon" href="/img/Large_Mug.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/img/Large_Mug.ico" type="image/x-icon">
     
-    <link rel="stylesheet" type="text/css" href="/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/miniplayertest.css"/>
  	<link rel="stylesheet" type="text/css" href="/css/puzzle.css"/>
@@ -88,6 +87,12 @@ else {
 </style>
 
 <style type="text/css">
+#thetextbox{position: absolute;
+			top: 52px;
+			left: -145px;
+			width: 210px;
+			display: none;}
+			
 .facebook{position: relative;
 		  top:0px;
 		  left:0px;
@@ -106,12 +111,12 @@ else {
 		 opacity: .8;
 		 border-radius: 15px;}
  		 
-.email{position: relative;
+.thelink{position: relative;
  		 top:-58px;
  		 left:110px;
  		 z-index: 3;
- 		 height:29px;
-		 width:29px;
+ 		 height:59px;
+		 width:50px;
 		 opacity: .8;
 		 border-radius: 15px;}
 		 
@@ -125,57 +130,57 @@ else {
 		 border-radius: 15px;}
 		 
 .social{position: absolute;
-		top:66px;
+		top:56px;
 		right:81px;
 		display: none;
 		width:151px;}
 		
-.fab_button{background: url(/img/socialbuttons2.png)0 -416px;
+.fab_button{background: url(/img/socialbuttons.png)0 -416px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.fab_button:hover{background: url(/img/socialbuttons2.png)1px -465px;
+.fab_button:hover{background: url(/img/socialbuttons.png)1px -465px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.twi_button{background: url(/img/socialbuttons2.png)0 -514px;
+.twi_button{background: url(/img/socialbuttons.png)0 -514px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.twi_button:hover{background: url(/img/socialbuttons2.png)0 -564px;
+.twi_button:hover{background: url(/img/socialbuttons.png)0 -564px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		 
-.email_button{background: url(/img/socialbuttons2.png)0 -618px;
+.link_button{background: url(/img/socialbuttons.png)0 -721px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.email_button:hover{background: url(/img/socialbuttons2.png)0 -672px;
+.link_button:hover{background: url(/img/socialbuttons.png)0 -771px;
 		   height:50px;
 		   width:50px;
 		   opacity: .9;
 		   }
-		   
-		   
+		    
 </style>
 </head>  
 
 <body>
+<div id="topheader">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -216,18 +221,16 @@ else {
 							<div class="fb-like" data-href="http://www.facebook.com/audiblecoffee" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-font="arial">
 							</div>
 						</div>
-							
-					<div id="black">
-						<div class="black"></div>
-					</div>
+					
 					</div>
 					</div>
 
 </div>
-
+<div id="topbuttons">
 <a href="http://www.audiblecoffee.com/about/" target="_blank" id="about">About</a>
 <a href="http://www.audiblecoffee.com/faq/" target="_blank" id="faq">FAQ</a>
-
+</div>
+</div>
 <div id="globalcontrols">
 <div id="globalforward"></div>
 <div id="globalback"></div>
@@ -241,6 +244,10 @@ else {
 <img src="../img/shuffle.png" id="original-order" class="shuffles"/>
 <span class="onshuffle">On</span>
 <span class="offshuffle">Off</span>
+</div>
+<div id="keyboard"></div>
+<div id="instructions">
+<h1>Once a song is playing, you can control the music with your spacebar and arrows.</h1>
 </div>
 
 <div id="filters">
@@ -295,8 +302,9 @@ else {
 					target='_blank'><div class='twi_button'></div></a>
 				</div>
 				
-				<div class='email'>
-					<a href='mailto:?subject=Check out Audible Coffee&amp;body=www.audiblecoffee.com/singles/m{$value['ID']}'><div class='email_button'></div></a>
+				<div class='thelink'>
+					<input type=\"text\"value=\"www.audiblecoffee.com/singles/m{$value['ID']}\" id=\"thetextbox\">
+					<div class='link_button'></div>
 				</div>
 				
 			</div>
@@ -472,7 +480,7 @@ var infloadmore = false;
 		$(sitem).parents(".square").addClass("playing")	
 		$('#globalplay').css('display','none');
 		$('#globalpause').css('display','block');
-        $('#globalcontrols,#shufflebuttons').fadeIn('slow', function() {})
+        $('#globalcontrols,#shufflebuttons, #keyboard').fadeIn('slow', function() {})
         };
 	
 		function playNext(idx,sitem) {
@@ -630,6 +638,13 @@ var infloadmore = false;
 		$("#filters h5").css('color', 'white');
 		});
 		
+//Instructions	
+		$("#keyboard").hover(function(){
+		$("#instructions").css('display', 'block');
+		}, function(){
+		$("#instructions").css('display', 'none');
+		});
+		
 //global arrow back
 		$(document).keydown(function(e){
 		if (e.keyCode == 37) { 
@@ -670,36 +685,40 @@ var infloadmore = false;
 		return false;
 		}
 		});
-				
+			
+
+			
 //social Toggle
 
 $(".twittab").mouseenter(showNav).mouseleave(hideNav);
 
 function showNav(){  
-    $('#googfaceblack').stop().animate({ left: 174 }, 'slow')};
+    $('#googfaceblack').stop().animate({ left: 174 }, 'slow');
+    $('.twittab').stop().animate({ width: 193 }, 'slow')};
 function hideNav(){  
-    $('#googfaceblack').stop().animate({ left: 27 }, 'slow')};
+    $('#googfaceblack').stop().animate({ left: 27 }, 'slow');
+    $('.twittab').stop().animate({ width: 33 }, 'slow')};
 		
 		
 		$('.gogplustab').hover( 
 		function() {
 		$('#faceblack').stop().animate({ left: 174 }, 'slow', function() {
 		});
-		}, 
+		$('.gogplustab').stop().animate({ width: 193 }, 'slow')}
+		, 
 		function() {
 		$('#faceblack').stop().animate({ left: 32 }, 'slow', function() {
 		});
-		});
+		$('.gogplustab').stop().animate({ width: 33 }, 'slow')}
+		);
 		
 		$('.fbooktab').hover( 
 		function() {
-		$('#black').stop().animate({ left: 173 }, 'slow', function() {
-		});
-		}, 
+		$('.fbooktab').stop().animate({ width: 163 }, 'slow')}
+		, 
 		function() {
-		$('#black').stop().animate({ left: 30 }, 'slow', function() {
-		});
-		});
+		$('.fbooktab').stop().animate({ width: 33 }, 'slow')}
+		);
 
 
 </script>        

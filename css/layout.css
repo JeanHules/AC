@@ -4,30 +4,47 @@ body{
 	font-family: 'Quattrocento Sans', sans-serif; 
 	font-weight: 100;
 	}
-	
+#topbuttons{position: fixed;
+			height:28px;
+			right:0px;
+			top:0px;
+			background: black;
+			width:119px;
+			border-bottom: 1px solid #848484;
+			border-left:1px solid #848484;}	
+			
 #about{font-family: 'Quattrocento Sans', sans-serif; 
 	   font-weight: 100;
-	   color:#f710ef;
+	   color:#848484;
 	   font-size:16px;
 	   position: absolute;
-	   top:10px;
-	   right:20px;
+	   top:5px;
+	   right:14px;
 	   text-decoration: none;
-	   z-index: 2000;}
+	   z-index: 2000;
+	   background: black;}
 	   
 #faq{font-family: 'Quattrocento Sans', sans-serif; 
 	   font-weight: 100;
-	   color:#f710ef;
+	   color:#848484;
 	   font-size:16px;
 	   position: absolute;
-	   top:10px;
-	   right:90px;
+	   top:5px;
+	   right:78px;
 	   text-decoration: none;
-	   z-index: 2000;}
+	   z-index: 2000;
+	   background: black;}
 	   
-#about:hover{text-decoration: underline;}
-#faq:hover{text-decoration: underline;}
+#about:hover{color:white;}
+#faq:hover{color:white;}
 
+#topheader{
+	height: 28px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;}
+	
 #thegoods{
 	padding: 0px 10px 10px 34px; 
 	width: 1233px; 
@@ -51,7 +68,7 @@ body{
 .container{
 	top: -4px;
 	width: 1233px;
-	margin-left: 5px;
+	margin-left: -20px;
     }
 		
 		
@@ -89,7 +106,7 @@ body{
 .boxtop {
 	position:relative;
 	left:5px;
-	top:10px;
+	top:4px;
 	height: 30px;
 	width:290px;
 	opacity: .7;
@@ -402,7 +419,7 @@ h4{
 #toggle, x:-moz-any-link{left:256px;}
 							  		
 #toggle:hover #gear{
-	opacity: .75;
+	opacity: 1;
 	}
 
 
@@ -416,6 +433,7 @@ h4{
 	position: relative;
 	top: 1px;
 	left: 1px;
+	opacity: .9;
 	}
 	
 #shufflebuttons{
@@ -429,6 +447,42 @@ left: 167px;
 z-index: 1000;
 display: none;
 	}	
+	
+#keyboard{
+		background: url(../img/arrows.png);
+		position: absolute;
+		left: 100px;
+		bottom:5px;
+		height: 23px;
+		width: 31px;
+		position: fixed;
+		left: 257px;
+		z-index: 1000;
+		display:none;
+}
+
+#instructions{
+    bottom: 35px;
+color: white;
+display: none;
+left: 257px;
+position: fixed;
+width: 180px;
+z-index: 4000;
+background: black;
+height: 66px;
+border-radius: 7px;}
+
+
+#instructions h1{
+    top: 8px;
+color: white;
+font-size: 14px;
+left: 5px;
+position: absolute;
+width: 180px;
+z-index: 4000;}
+	
 	
 #shuffle{
 	position: relative;
@@ -470,11 +524,11 @@ display: none;
 		  bottom:0px;
 		  left:10px;
 		  background-color: black;
-		  opacity: .9;
+		  opacity: 1;
 		  height:34px;
-		  width:260px;
+		  width:299px;
 		  z-index: 1000;
-		  border-radius: 15px;
+		  border-radius: 7px;
 		  display: none;
 		  }
 		   
@@ -586,28 +640,30 @@ display: none;
 		  top:0px;
 		  left:0px;
 		  z-index:1;
-		  height:29px;
-		  width:128px;
-		  border-radius: 15px;
-		  z-index: 2000;}
+		  height:28px;
+		  width:33px;
+		  z-index: 2000;
+		  overflow: hidden;
+		  border-right: 1px solid #848484;}
 		  
 .twittab{position: relative;
  		 top:0px;
  		 left:0px;
  		 z-index: 3;
  		 height:29px;
-		 width:90px;
-		 border-radius: 15px;
-		 z-index: 2000;}
+		 width:28px;
+		 z-index: 2000;
+		 overflow: hidden;
+		 }
 		 
 .gogplustab{position: relative;
  		 top:0px;
  		 left:0px;
  		 z-index: 3;
  		 height:29px;
-		 width:143px;
-		 border-radius: 15px;
-		 z-index: 2000;}
+		 width:33px;
+		 z-index: 2000;
+		 overflow: hidden;}
 		 
 #___plusone_0{width: 80px;}
 
@@ -619,25 +675,14 @@ display: none;
 #faceblack{position: relative;
 			   left:32px;
 			   top:-29px;
-			   z-index: 3000;}
+			   z-index: 3000;
+			   width:173px;
+			   overflow: hidden;}
 			   
-.black{
-	background: url(../img/socialtabs.png)0px -204px;
-	position: relative;
-	left:0px;
-	top:0px;
-	height:29px;
-	width:163px;
-	z-index: 4000;
-			   }
-			   
-#black{
-	position: relative;
-	left:30px;
-	top:-29px;
-	z-index: 4000;
-			   }
+
 			   
 #sharetabs{position: absolute;
 		   top:0px;
-		   left:-2px;}
+		   left:-10px;}
+		   
+.thelink:hover #thetextbox{display: block;}
