@@ -5,7 +5,33 @@ body{
 	font-weight: 100;
 	margin:0;
 	}
+#repeats{position: absolute;
+		 height:30px;
+		 width:36px;
+		 top:9px;
+		 left:8px;}
+		
+#repeaton{
+	background: url(../img/repeats.png)0 -30px;
+	height: 27px;
+	width: 34px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	opacity: 1;
+	}
 
+#repeatoff{
+	background: url(../img/repeats.png)0 0px;
+	height: 27px;
+	width: 34px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	opacity: 1;
+	}
 
 
 .container{
@@ -49,20 +75,33 @@ body{
 		width:43px;
 		z-index: 4000;
 		}	
+		
+#headphonebutton{
+		background: url(../img/headphone_button.png);
+		background-repeat: no-repeat;
+		position: fixed;
+		top: 6px;
+		right:14px;
+		height: 40px;
+		width:43px;
+		z-index: 4000;
+		display: none;
+		}	
 	
 .instructions{position: relative;
 			  top: 46px;
-			  left: 82px;
+			  left:78px;
 			  font-size: 19px;
 			  color: #f710ef;
 			  width:162px;}	
 
 #audiocontrols{position: fixed;
-			   bottom:-40px;
+			   bottom:0px;
 			   background-color: black;
 			   width:320px;
-			   height:33px;
-			   z-index: 30;}
+			   height:44px;
+			   z-index: 3000;
+			   display: none;}
 	
 #sharelink{
 		background: url(../img/share.png);
@@ -95,6 +134,16 @@ body{
 	margin-right: 5px;
 	margin-top: 5px;
     }
+    
+.dropdownsquare {
+	position:relative;
+	margin-left: auto;
+	margin-right:auto;
+	display:block;
+	width:300px;
+	height:300px;
+    top:56px;}
+
 
 .box {
 	position:absolute;
@@ -118,6 +167,18 @@ body{
 	border-radius: 5px;
 	height:150px;
 	width:150px;
+    }
+    
+.img2 {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0px;
+	border-radius: 5px;
+	height:300px;
+	width:300px;
+	display: block;
+	opacity: 1;
     }
     
 .date{position: relative;
@@ -158,7 +219,104 @@ h2{
 	width:150px;
 	height:15px;
 	}
+.dropdownbox {
+	position:absolute;
+	left:5px;
+	bottom:10px;
+	height: 134px;
+	width:290px;
+	opacity: .7;
+	background: black;
+	border-radius: 15px;
+	display: inline;
+	overflow: hidden;
+    }
+
+
+.boxtop {
+	position:absolute;
+	left:5px;
+	top:10px;
+	height: 30px;
+	width:290px;
+	opacity: .7;
+	background: black;
+	border-radius: 15px;
+	display: block;
+    }
+                
+.boxtop .genre{
+	color:#f710ef;
+	font-size: 20px;
+	position: relative;
+	top:4px;
+	left:10px;
+	display: block;
+	text-align: center;
+	width:280px;
+	height:20px;
+	padding-right: 5px;
+	}
+
+			
+.img1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-radius: 10px;
+    }
+    
+.date{position: relative;
+	top:0px;
+	left:10px;
+	font-size:18px;
+	margin:0px;
+	width:280px;
+	height:15px;
+	}
+
+.datespace{
+	border-right: 1px solid #848484;
+	width: 44px;
+	height: 40px;
+	position: relative;
+	top: 6px;}
+		
+.dropdownartist{ 
+	top:-32px;
+	left:48px;
+	font-size: 14px;
+	margin:0px 0px 0px 4px;
+	width:280px;
+	height:15px;
+	}
 	
+h2, h4, h5, .smallname, .smalltitle, h1, .smalldesc, .date{
+	font-weight: 100;
+	position: relative;
+	color:#a3a8a4;
+	}	
+		
+.dropdowntitle{
+	top:-25px;
+	left:48px;
+	font-size: 13px;
+	margin:0px 0px 0px 4px;
+	width:280px;
+	height:15px;
+	}
+
+h4, x:-moz-any-link {line-height: 14px;}
+		
+h4{
+	top: -38px;
+	left: 10px;
+	font-size: 13px;
+	width: 270px;
+	height:40px;
+	text-align:justify;
+	}
+
 .player{
 	position: relative;
 	top:16.5px;
@@ -208,7 +366,7 @@ h2{
 		  
 #filters{	
 		position:fixed;
-		display: inline-block;
+		display: none;;
 		left: -312px;
 		top:2px;
 		width: 306px;
@@ -309,8 +467,8 @@ border-radius: 10px;
 height: 31px;
 width: 80px;
 position: absolute;
-bottom: 2px;
-right: -3px;
+bottom: 8px;
+right: -25px;
 z-index: 1000;
 display: block;
 	}	
@@ -351,11 +509,11 @@ display: block;
 	}
 	
 
-#globalcontrols{position: relative;
-		  bottom:0px;
-		  left:80px;
+#globalcontrols{position: absolute;
+		  bottom:5px;
+		  left:82px;
 		  background-color: black;
-		  opacity: .9;
+		  opacity: 1;
 		  height:34px;
 		  width:100%;
 		  z-index: 1000;
@@ -369,7 +527,7 @@ display: block;
 		   position: relative;
 		   top:2px;
 		   left:111px;
-		   opacity: .8;}
+		   opacity: 1;}
 		   
 #globalforward:hover{opacity: 1;}
 
@@ -384,7 +542,7 @@ display: block;
 		   position: relative;
 		   top:-34px;
 		   left:9px;
-		   opacity: .8;}
+		   opacity: 1;}
 		   
 #globalback:hover{opacity: 1;}
 		   
@@ -395,7 +553,7 @@ display: block;
 		top: 0px;
 		left: 0px;
 		display:none;
-		opacity: .8;}
+		opacity: 1;}
 		
 #globalplay:hover{opacity: 1;}
 
@@ -406,7 +564,7 @@ display: block;
 			top: 0px;
 			left: 0px;
 		   display:block;
-		   opacity: .8;}
+		   opacity: 1;}
 		   
 #globalpause:hover{opacity: 1;}
 		   
@@ -417,70 +575,124 @@ display: block;
 		   left:59px;
 		   display: block;}
 
-.facebook{position: relative;
-		  top:4px;
-		  left:10px;
+.facebook{position: absolute;
+		  top:0px;
+		  left:0px;
 		  z-index:1;
-		  width:32px;}
+		  height:49px;
+		  width:49px;
+		  opacity: .8;
+		  border-radius: 15px;}
 		  
-.twitter{position: relative;
- 		 top:-25px;
- 		 left:70px;
+.twitter{position: absolute;
+ 		 top:0px;
+ 		 left:75px;
  		 z-index: 3;
- 		 width:32px;}
+ 		 height:49px;
+		 width:49px;
+		 opacity: .8;
+		 border-radius: 15px;}
  		 
-.email{position: relative;
- 		 top:-55px;
- 		 left:130px;
+.email{position: absolute;
+ 		 top:0px;
+ 		 left:150px;
  		 z-index: 3;
- 		 width:32px;}
- 		 
-.social{
-	position: absolute;
-	bottom: 2px;
-	left: 0px;
-	width: 171px;
-	z-index: 10;
-	background-color: black;
-	border-top-right-radius: 10px;
-	display: none;
-	height: 70px;
-	
-	}
+ 		 height:49px;
+		 width:49px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.googleplus{position: relative;
+ 		 top:-87px;
+ 		 left:165px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.dropdownsocial{position: absolute;
+		top:73px;
+		width:200px;
+		height:50px;
+		left:50px;
+		}
 		
-.fab_button{background: url(../img/social_buttons.png)0 -30px;
-		   height:30px;
-		   width:30px;
+.fab_button{background: url(/img/socialbuttons2.png)0 -416px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
 		   
 		
-.fab_button:hover{background: url(../img/social_buttons.png)0 0px;
-		   height:30px;
-		   width:30px;
+.fab_button:hover{background: url(/img/socialbuttons2.png)1px -465px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
 		   
 		
-.twi_button{background: url(../img/social_buttons.png)0 -120px;
-		   height:30px;
-		   width:30px;
+.twi_button{background: url(/img/socialbuttons2.png)0 -514px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
 		   
 		
-.twi_button:hover{background: url(../img/social_buttons.png)0 -90px;
-		   height:30px;
-		   width:30px;
+.twi_button:hover{background: url(/img/socialbuttons2.png)0 -564px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
 		   
 		 
-.email_button{background: url(../img/social_buttons.png)0 -300px;
-		   height:30px;
-		   width:30px;
+.email_button{background: url(/img/socialbuttons2.png)0 -618px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
 		   
 		
-.email_button:hover{background: url(../img/social_buttons.png)0 -270px;
-		   height:30px;
-		   width:30px;
+.email_button:hover{background: url(/img/socialbuttons2.png)0 -672px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
 		   }
-		   
+		   		   
+#dropdown{
+	position: fixed;
+	height: 363px;
+	width: 320px;
+	background: black;
+	opacity: 1;
+	top: -410px;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	z-index: 300;
+}
+		  
+.dropdownartist{ 
+	top:4px;
+	left:-2px;
+	font-size: 10px;
+	margin:0px 0px 0px 4px;
+	width:150px;
+	height:15px;
+	}
+	
+h2, h4{
+	font-weight: 100;
+	position: relative;
+	color:#a3a8a4;
+	}	
+		
+.dropdowntitle{
+	top:2px;
+	left:-2px;
+	font-size: 9px;
+	margin:0px 0px 0px 4px;
+	width:150px;
+	height:15px;
+	}		  
 </style>

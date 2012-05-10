@@ -68,12 +68,13 @@ else {
 </head>  
 
 
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+<body>
 
 <div id="header">
 <h2 class="headername">AUDIBLE COFFEE</h2>
 </div>
 <div id="headerbutton"></div>
+<div id="headphonebutton"></div>
 
 
 <div id="filters">
@@ -92,26 +93,57 @@ else {
 </ul>
 </div>
 
+
 <div class="thegoods">
-<h1 class="instructions">Tap a song to play</h1>
-
-<div id="audiocontrols">
-
-	<div class="social">
+<div id="dropdown">
+	<div class="dropdownsquare <?php echo $genreinfo['ClassName'];?>">
+    <!-- DJ Picture -->
+    <img src="/pictures/<?php echo $trackinfo['ArtistImage'];?>"  class="img2" />
+    		<div class="boxtop">
+    	    <span class="genre"><?php echo $genreinfo['Name'];?></span>
+    	    </div>
+    	   <div class="dropdownsocial">
 				<div class="facebook">
-				    <a href="https://www.facebook.com/AudibleCoffee" target="_blank"> <div class="fab_button"></div> </a>
+					<a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>&amp;p[images][0]=http://www.audiblecoffee.com/img/logo.jpg&amp;p[title]=<?php echo $trackinfo['SharingTitle'];?>&amp;p[summary]=Revolutionizing the way you discover and listen to electronic dance music." target="_blank">
+					<div class="fab_button"></div>
+					</a>
 				</div>
+			
 				
 				<div class="twitter">
-					<a href="https://twitter.com/#!/audiblecoffee" target="_blank"> <div class="twi_button"></div> </a>
+					<a href="http://twitter.com/home/?status=@AudibleCoffee Revolutionizing the way you discover and listen to electronic dance music. www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>" 
+					target="_blank"><div class="twi_button"></div></a>
 				</div>
 				
 				<div class="email">
-					<a href="mailto:music@audiblecoffee.com"> <div class="email_button"></div> </a>
+					<a href="mailto:?subject=Check out Audible Coffee&amp;body=www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>"><div class="email_button"></div></a>
 				</div>
 				
 	</div>
-	<div id="sharelink"></div>
+    		<div class="dropdownbox">
+    		<!-- DJ Name -->
+    		<h1 class="dropdownartist"><?php echo $trackinfo['Artist'];?></h1>
+    		
+    		<!-- Song Title -->
+    		<h2 class="dropdowntitle"><?php echo $trackinfo['Title'];?></h2>
+    		
+    		 <!--Song Description(179 characters with spaces)-->
+    		<h4><?php echo $trackinfo['Description'];?></h4> 
+			</div>
+	</div> 
+	
+	
+
+</div>
+<h1 class="instructions">Tap a song to play</h1>
+
+<div id="audiocontrols">
+	
+	<div id="repeats">
+	<div id="repeatoff"></div>
+	<div id="repeaton"></div>
+	</div>
+	
 	<div id="globalcontrols">
 	<div id="globalforward"></div>
 	<div id="globalback"></div>
@@ -123,8 +155,6 @@ else {
 	<div id="shufflebuttons">
 	<img src="../img/shufflegrey.png" id="shuffle" class="shuffles"/>
 	<img src="../img/shuffle.png" id="original-order" class="shuffles"/>
-	<span class="onshuffle">On</span>
-	<span class="offshuffle">Off</span>
 	</div>
 </div>
 
@@ -170,7 +200,6 @@ else {
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="../mobileinc/jquery.232fd31.min.js"></script>
 	<script src="../mobileinc/debug.js"></script>
-	<script src="../mobileinc/jquery.scrollTo-min.js"></script>
 	
 <script type="text/javascript">
 
@@ -322,7 +351,6 @@ var infloadmore = false;
 		next = $filteredAtoms.eq( nextIndex ).find('.audio');
 		$("#"+"MP_"+next.attr("id")).jPlayer("stop"); 
 		next.mb_miniPlayer_play();
-		$.scrollTo( $filteredAtoms.eq( nextIndex ), 800, {over:-0.5} );
 		
 		};
 
@@ -354,22 +382,18 @@ var infloadmore = false;
 		$container.isotope('insert', $newElements );
 		}, 1000);
 		});
-//genre
+//Filter slider button
 		$('#headerbutton').toggle( 
 		function() {
-		$('.thegoods').animate({ left: 312 }, 'slow', function() {
-		});
-		$('#filters').animate({ left: 0 }, 'slow', function() {
-		});
+		$('.thegoods').animate({ left: 312 }, 'fast');
+		$('#filters').animate({ left: 0 }, 'fast').css('display' , 'block');
 		}, 
 		function() {
-		$('.thegoods').animate({ left: 0 }, 'slow', function() {
-		});
-		$('#filters').animate({ left: -312 }, 'slow', function() {
-		});
+		$('.thegoods').animate({ left: 0 }, 'fast');
+		$('#filters').animate({ left: -312 }, 'fast').css('display' , 'none');		
 		});
 		
-//shuffle
+//shuffle button
 		$('#shufflebuttons').toggle( 
 		function() {
 		$('#original-order, .onshuffle').css('display','block');
@@ -378,6 +402,17 @@ var infloadmore = false;
 		function() {
 		$('#original-order, .onshuffle').css('display','none');
 		$('#shuffle, .offshuffle').css('display','block');
+		});
+		
+//Repeat button
+		$('#repeats').toggle( 
+		function() {
+		$('#repeatoff').css('display','none');
+		$('#repeaton').css('display','block');
+		}, 
+		function() {
+		$('#repeatoff').css('display','block');
+		$('#repeaton').css('display','none');
 		});
 		
 //global previous
@@ -397,10 +432,10 @@ var infloadmore = false;
 		};
 
 	
-//global back
+//global back button
 		$('#globalback').click(function() { playPrevious(0,$('.playing .box')); });
 	
-//global forward		
+//global forward button		
 		$('#globalforward').click(function() { 
 		ID = $('.playing').find('.audio').attr("id");
 		$("#"+"MP_"+ID).jPlayer("stop");
@@ -420,29 +455,12 @@ var infloadmore = false;
 		$('#globalpause').css('display','block');
 		$('.playing').find('.play').click();
 		});
-	
-//global play/pause (button toggle)		
-		$('.play').toggle( 
-		function() {
-		$('#globalplay').css('display','none');
-		$('#globalpause').css('display','block');
-		}, 
-		function() {
-		$('#globalplay').css('display','block');
-		$('#globalpause').css('display','none');
-		});
 
-//Whats your roast color change		
-		$("#roastbutton").hover(function(){
-		$("#filters h5").css('color', '#f710ef');
-		}, function(){
-		$("#filters h5").css('color', 'white');
-		});
-		
+//Tap on square to view controls
 $(".square").click(function(){
-		$("#audiocontrols").animate({ bottom: 0 }, 'slow', function() {
-		});
+		$("#audiocontrols").fadeIn("slow");		
 		$(".square").find(this).css('color', '#f710ef');
+		$('#headphonebutton').css('display' , 'block');
 		});
 
 		$('#sharelink').toggle(function() {
@@ -452,22 +470,19 @@ $(".square").click(function(){
 		$(".social").css('display', 'none');
 		});
 		
+//Dropdown Toggle
+		$('#headphonebutton').toggle(function() {
+		$('#dropdown').css('display' , 'block'); 
+		$('#dropdown').animate({ top: -10 }, 'fast'
+		);
+		}, 
+		function() {
+		$('#dropdown').animate({ top: -410 }, 'fast');
+		$('#dropdown').css('display' , 'none');
+		});	
+		
 		
 </script>        
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-27304177-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 
   
 	
