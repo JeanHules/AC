@@ -9,9 +9,7 @@ body{
 			right:0px;
 			top:0px;
 			background: black;
-			width:119px;
-			border-bottom: 1px solid #848484;
-			border-left:1px solid #848484;}	
+			width:113px;}	
 			
 #about{font-family: 'Quattrocento Sans', sans-serif; 
 	   font-weight: 100;
@@ -52,7 +50,7 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	top: 30px;	
+	top: 24px;	
 	z-index: 500;
 	}
 		
@@ -60,7 +58,7 @@ body{
 #logo {
 	position: relative;
 	top:7px;
-	left:2px;
+	left:-23px;
 	z-index: 9;
 	margin-bottom: 5px;
 	}
@@ -90,7 +88,7 @@ body{
 	width:290px;
 	opacity: .7;
 	background: black;
-	border-radius: 15px;
+	border-radius: 7px;
 	display: inline;
 	overflow: hidden;
     }
@@ -111,7 +109,7 @@ body{
 	width:290px;
 	opacity: .7;
 	background: black;
-	border-radius: 15px;
+	border-radius: 7px;
 	display: none;
     }
                 
@@ -139,12 +137,12 @@ body{
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	border-radius: 10px;
+	border-radius: 7px;
     }
     
 .date{position: relative;
 	top:0px;
-	left:10px;
+	left:6px;
 	font-size:18px;
 	margin:0px;
 	width:280px;
@@ -304,7 +302,7 @@ h4{
 	border-top-left-radius: 10px;	
 	cursor: pointer;
 	position: relative;
-	top:39px;
+	top:0px;
 	text-decoration: none;
 		  }
 
@@ -588,7 +586,7 @@ z-index: 4000;}
 
 .twitcon{
 	background: url(../img/socialtabs1.png)0px -113px;
-	height: 28px;
+	height: 27px;
 	width: 175px;
 	position: absolute;
 	top: 0px;
@@ -597,7 +595,7 @@ z-index: 4000;}
 	
 .googlecon{
 	background: url(../img/socialtabs1.png)0px -144px;
-	height: 28px;
+	height: 27px;
 	width: 175px;
 	position: absolute;
 	top: 0px;
@@ -607,7 +605,7 @@ z-index: 4000;}
 	
 .fbookcon{
 	background: url(../img/socialtabs1.png)0px 60px;
-	height: 28px;
+	height: 27px;
 	width: 174px;
 	position: absolute;
 	top: 0px;
@@ -644,7 +642,7 @@ z-index: 4000;}
 		  width:33px;
 		  z-index: 2000;
 		  overflow: hidden;
-		  border-right: 1px solid #848484;}
+		  }
 		  
 .twittab{position: relative;
  		 top:0px;

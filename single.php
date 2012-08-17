@@ -36,34 +36,141 @@ $genreinfo = getGenre($trackinfo['GenreID']);
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/miniplayer.css"/>
  	<link rel="stylesheet" href="/css/puzzle.css"/>
- 	<style type="text/css">
+
+<style type="text/css">
   .square h1 { color: #a3a8a4; }
   .square.hover h1 { color: #f710ef; }
+  .square.playing h1 { color: #f710ef; }
   
   .square h2 { color: #a3a8a4; }
   .square.hover h2 { color: white; }
+  .square.playing h2 { color: white; }
   
   .square .smallname { color: #a3a8a4; }
   .square.hover .smallname { color: #f710ef; }
+  .square.playing .smallname { color: #f710ef; }
   
   .square .smalltitle { color: #a3a8a4; }
   .square.hover .smalltitle { color: white; }
+  .square.playing .smalltitle { color: white; }
   
-  .square.hover .img1 { opacity: 0.3; }
+  .square.hover .img1 { opacity: 0.5; }
   .square.hover .background { opacity: 0.9; }
+  .square.playing .img1 { opacity: 0.5; }
+  .square.playing .background { opacity: 0.9; }
 
   .square .box { height: 50px; opacity: 0.7; }
   .square.hover .box { height: 160px; opacity: 0.8; }
+  .square.playing .box { height: 160px; opacity: 0.8; }
   
   .square .close,
-  .square .boxtop, 
-  .square .social{ display: none; }
+  .square .boxtop 
+  .square.social{ display: none; }
   .square.hover .close,
   .square.hover .boxtop, 
-  .square.hover .social{ display: block; }
+  .square.hover .social { display: block; }
+  .square.playing .close,
+  .square.playing .boxtop, 
+  .square.playing .social { display: block; }
+</style>
+
+<style type="text/css">
+#thetextbox{position: absolute;
+			top: 52px;
+			left: -145px;
+			width: 210px;
+			display: none;}
+			
+.facebook{position: relative;
+		  top:0px;
+		  left:-1px;
+		  z-index:1;
+		  height:29px;
+		  width:29px;
+		  opacity: .8;
+		  border-radius: 15px;}
+		  
+.twitter{position: relative;
+ 		 top:-31px;
+ 		 left:55px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+ 		 
+.thelink{position: relative;
+ 		 top:-60px;
+ 		 left:110px;
+ 		 z-index: 3;
+ 		 height:59px;
+		 width:50px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.googleplus{position: relative;
+ 		 top:-87px;
+ 		 left:165px;
+ 		 z-index: 3;
+ 		 height:29px;
+		 width:29px;
+		 opacity: .8;
+		 border-radius: 15px;}
+		 
+.social{position: absolute;
+		top:56px;
+		right:85px;
+		display: none;
+		width:151px;}
+		
+.fab_button:hover{background: url(/img/socialbuttonsBW1.png)-3px -417px;
+		   height:49px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.fab_button{background: url(/img/socialbuttonsBW1.png)-3px -466px;
+		   height:49px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.twi_button:hover{background: url(/img/socialbuttonsBW1.png)-3px -515px;
+height: 49px;
+width: 50px;
+opacity: .9;
+		   }
+		   
+		
+.twi_button{
+background: url(/img/socialbuttonsBW1.png)-3px -566px;
+height: 52px;
+width: 50px;
+opacity: .9;
+
+	}
+		  
+		   
+		 
+.email_button{background: url(/img/socialbuttonsBW1.png)-3px -619px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		   
+		
+.email_button:hover{background: url(/img/socialbuttonsBW1.png)-3px -670px;
+		   height:50px;
+		   width:50px;
+		   opacity: .9;
+		   }
+		    
 </style>
 </head>
 <body>
+<div id="topheader">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -73,6 +180,46 @@ $genreinfo = getGenre($trackinfo['GenreID']);
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<div id="sharetabs">
+			
+				<div class="twittab">
+					<div class="twitcon"></div>
+					<div class="twitterbutton"><a href="https://twitter.com/audiblecoffee" class="twitter-follow-button" data-show-count="false">Follow</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+				
+				<div id="googfaceblack">
+					<div class="gogplustab">
+						<div class="googlecon"></div>
+						<div class="gicon">
+							<div class="g-plusone" data-size="tall" data-annotation="inline" data-width="100"  data-href="http://www.audiblecoffee.com"></div>
+						</div>
+					</div>
+						
+					<div id="faceblack">
+						<div class="fbooktab">
+							<div class="fbookcon"></div>
+							<div class="fb-like" data-href="http://www.facebook.com/audiblecoffee" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-font="arial">
+							</div>
+						</div>
+					
+					</div>
+					</div>
+
+</div>
+<div id="topbuttons">
+<a href="http://www.audiblecoffee.com/about/" target="_blank" id="about">About</a>
+<a href="http://www.audiblecoffee.com/faq/" target="_blank" id="faq">FAQ</a>
+</div>
 <div id="container">
 <a href="http://www.audiblecoffee.com"><img src="/img/AC_LOGO-Rasterized.png" id="logo" /></a>
 
@@ -91,7 +238,7 @@ $genreinfo = getGenre($trackinfo['GenreID']);
 			
 				
 				<div class="twitter">
-					<a href="http://twitter.com/home/?status=@AudibleCoffee Revolutionizing the way you discover and listen to electronic dance music. www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>" 
+					<a href="http://twitter.com/home/?status=♫ <?php echo $trackinfo['SharingTitle'];?> @AudibleCoffee www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>" 
 					target="_blank"><div class="twi_button"></div></a>
 				</div>
 				
@@ -295,6 +442,39 @@ $genreinfo = getGenre($trackinfo['GenreID']);
 		$('#original-order, .onshuffle').css('display','none');
 		$('#shuffle, .offshuffle').css('display','block');
 		});
+		
+//social Toggle
+
+$(".twittab").mouseenter(showNav).mouseleave(hideNav);
+
+function showNav(){  
+    $('#googfaceblack').stop().animate({ left: 174 }, 'slow');
+    $('.twittab').stop().animate({ width: 193 }, 'slow')};
+function hideNav(){  
+    $('#googfaceblack').stop().animate({ left: 27 }, 'slow');
+    $('.twittab').stop().animate({ width: 33 }, 'slow')};
+		
+		
+		$('.gogplustab').hover( 
+		function() {
+		$('#faceblack').stop().animate({ left: 174 }, 'slow', function() {
+		});
+		$('.gogplustab').stop().animate({ width: 193 }, 'slow')}
+		, 
+		function() {
+		$('#faceblack').stop().animate({ left: 32 }, 'slow', function() {
+		});
+		$('.gogplustab').stop().animate({ width: 33 }, 'slow')}
+		);
+		
+		$('.fbooktab').hover( 
+		function() {
+		$('.fbooktab').stop().animate({ width: 163 }, 'slow')}
+		, 
+		function() {
+		$('.fbooktab').stop().animate({ width: 33 }, 'slow')}
+		);
+
         
 </script>        
 

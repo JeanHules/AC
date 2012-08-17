@@ -91,6 +91,7 @@
 	<meta property="og:title" content="{Title}"/>
 	<meta property="og:type" content="blog"/>
 	<meta property="og:description" content="{MetaDescription}"/>
+	<meta property="og:toptext" content="{MetaDescription}"/>
 	<meta property="og:image" content="{PortraitURL-64}"/>
 	{/block:IndexPage}
 	
@@ -435,6 +436,9 @@
 		<div id="overlay" class="hidden"></div>
 		
 		<div id="main">
+		<section id="toptext">
+					{block:IfDescriptionTitle}<h2>{text:Description}</h2>{/block:IfDescriptionTitle}
+		</section>
 		<div id="iso">
 			
 			{block:IndexPage}

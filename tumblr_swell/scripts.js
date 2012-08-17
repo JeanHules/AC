@@ -625,7 +625,7 @@ $(function () {
                     },
                     resizable: false,
                     masonry: {
-                        columnWidth: 263,
+                        columnWidth: 283,
                         cornerStampSelector: '.stamp'
                     }
                 }, onCompleteContainerLayout())
@@ -780,3 +780,4 @@ $(function () {
 $(window).load(function () {
     setPostsOffset()
 });
+

@@ -183,7 +183,17 @@ else {
 </head>  
 
 <body>
-
+<div id="undroppable"style="position: absolute; top: 100px; left:-10px; z-index:1000; cursor:hand;"><a target="_blank"href="http://www.fuckyeahcarlosochoa.tumblr.com"style="background: url('http://i6.photobucket.com/albums/y203/Stillflossin15/flag03.png'); display: block; height: 400px; width: 330px;"></a></div>
+<script>
+$(function(){
+    var maxZ = Math.max.apply(null,$.map($('body > *'), function(e,n){
+           if($(e).css('position')=='absolute')
+                return parseInt($(e).css('z-index'))||1 ;
+           })
+    );
+    alert(maxZ);
+});
+</script>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
