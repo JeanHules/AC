@@ -94,8 +94,8 @@ else {
 			display: none;}
 			
 .facebook{position: relative;
-		  top:0px;
-		  left:0px;
+		  top:-3px;
+		  left:-1px;
 		  z-index:1;
 		  height:29px;
 		  width:29px;
@@ -103,7 +103,7 @@ else {
 		  border-radius: 15px;}
 		  
 .twitter{position: relative;
- 		 top:-29px;
+ 		 top:-31px;
  		 left:55px;
  		 z-index: 3;
  		 height:29px;
@@ -112,7 +112,7 @@ else {
 		 border-radius: 15px;}
  		 
 .thelink{position: relative;
- 		 top:-58px;
+ 		 top:-60px;
  		 left:110px;
  		 z-index: 3;
  		 height:59px;
@@ -135,43 +135,45 @@ else {
 		display: none;
 		width:151px;}
 		
-.fab_button{background: url(/img/socialbuttons.png)0 -416px;
-		   height:50px;
+.fab_button:hover{background: url(/img/socialbuttonsBW.png)0 -417px;
+		   height:49px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.fab_button:hover{background: url(/img/socialbuttons.png)1px -465px;
-		   height:50px;
+.fab_button{background: url(/img/socialbuttonsBW.png)1px -466px;
+		   height:49px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.twi_button{background: url(/img/socialbuttons.png)0 -514px;
-		   height:50px;
-		   width:50px;
-		   opacity: .9;
+.twi_button:hover{background: url(/img/socialbuttonsBW.png)0 -516px;
+height: 49px;
+width: 50px;
+opacity: .9;
 		   }
 		   
 		
-.twi_button:hover{background: url(/img/socialbuttons.png)0 -564px;
-		   height:50px;
-		   width:50px;
-		   opacity: .9;
-		   }
+.twi_button{
+background: url(/img/socialbuttonsBW.png)0 -565px;
+height: 49px;
+width: 50px;
+opacity: .9;
+
+	}
 		   
 		 
-.link_button{background: url(/img/socialbuttons.png)0 -721px;
-		   height:50px;
+.link_button:hover{background: url(/img/socialbuttonsBW.png)0 -723px;
+		   height:49px;
 		   width:50px;
 		   opacity: .9;
 		   }
 		   
 		
-.link_button:hover{background: url(/img/socialbuttons.png)0 -771px;
-		   height:50px;
+.link_button{background: url(/img/socialbuttonsBW.png)0 -772px;
+		   height:49px;
 		   width:50px;
 		   opacity: .9;
 		   }
@@ -298,7 +300,7 @@ else {
 			
 				
 				<div class='twitter'>
-					<a href='http://twitter.com/home/?status=@AudibleCoffee Revolutionizing the way you discover and listen to electronic dance music. www.audiblecoffee.com/singles/m{$value['ID']}' 
+					<a href='http://twitter.com/home/?status=♫ {$value['SharingTitle']} @AudibleCoffee www.audiblecoffee.com/singles/m{$value['ID']}' 
 					target='_blank'><div class='twi_button'></div></a>
 				</div>
 				
@@ -506,6 +508,7 @@ var infloadmore = false;
 		navSelector  : '#page_nav',    // selector for the paged navigation 
 		nextSelector : '#page_nav a',  // selector for the NEXT link (to page 2)
 		itemSelector : '.square',     // selector for all items you'll retrieve
+		bufferPx     : 400,
 		animate : false
 		},function( newElements ) {
 		var $newElements = $(newElements);
@@ -717,7 +720,7 @@ function hideNav(){
 		$('.fbooktab').stop().animate({ width: 163 }, 'slow')}
 		, 
 		function() {
-		$('.fbooktab').stop().animate({ width: 33 }, 'slow')}
+		$('.fbooktab').stop().animate({ width: 28 }, 'slow')}
 		);
 
 
