@@ -155,6 +155,7 @@ cursor: default !important;
   text-shadow: 0 0 2px #999!important;
   position: relative;
   left: -213px;
+  top:3px;
 }
 
 .mbMiniPlayer span.time, x:-moz-any-link {left:-226px;
@@ -171,7 +172,7 @@ cursor: default !important;
    -moz-transform: scale(2);
    position: relative;
   left:-7px;
-  top:1px
+  top:0px
   
 }
 

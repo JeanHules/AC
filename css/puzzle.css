@@ -33,6 +33,7 @@
      -moz-transition-property:    -moz-transform, opacity;
        -o-transition-property:         top, left, opacity;
           transition-property:         transform, opacity;
+ display:block;
 }
 
 /**** disabling Isotope CSS3 transitions ****/
