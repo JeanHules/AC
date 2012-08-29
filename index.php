@@ -44,7 +44,7 @@ else {
 	<link rel="icon" href="/img/Large_Mug.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="/img/Large_Mug.ico" type="image/x-icon">
     
-    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/layout.css"/>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/miniplayertest.css"/>
  	<link rel="stylesheet" type="text/css" href="/css/puzzle.css"/>
@@ -177,12 +177,18 @@ opacity: .9;
 		   width:50px;
 		   opacity: .9;
 		   }
+		   
+hr {
+    position: relative;
+    top: 120px;
+    margin: 0px;
+}
 		    
 </style>
 </head>  
 
-<body>
-<div id="topheader">
+<body class="inverse" id="body">
+<div id="topheader" class="inverse">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -203,7 +209,7 @@ opacity: .9;
 <div id="sharetabs">
 			
 				<div class="twittab">
-					<div class="twitcon"></div>
+					<div class="twitcon" class="inverse"></div>
 					<div class="twitterbutton"><a href="https://twitter.com/audiblecoffee" class="twitter-follow-button" data-show-count="false">Follow</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					</div>
@@ -211,7 +217,7 @@ opacity: .9;
 				
 				<div id="googfaceblack">
 					<div class="gogplustab">
-						<div class="googlecon"></div>
+						<div class="googlecon" class="inverse"></div>
 						<div class="gicon">
 							<div class="g-plusone" data-size="tall" data-annotation="inline" data-width="100"  data-href="http://www.audiblecoffee.com"></div>
 						</div>
@@ -219,7 +225,7 @@ opacity: .9;
 						
 					<div id="faceblack">
 						<div class="fbooktab">
-							<div class="fbookcon"></div>
+							<div class="fbookcon" class="inverse"></div>
 							<div class="fb-like" data-href="http://www.facebook.com/audiblecoffee" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-font="arial">
 							</div>
 						</div>
@@ -228,12 +234,14 @@ opacity: .9;
 					</div>
 
 </div>
+<div id="headertitle"></div>
 <div id="topbuttons">
 <a href="http://www.audiblecoffee.com/about/" target="_blank" id="about">About</a>
 <a href="http://www.audiblecoffee.com/faq/" target="_blank" id="faq">FAQ</a>
+<a href="http://www.audiblecoffee.com/roasts/" target="_blank" id="roasts">Roasts</a>
 </div>
 </div>
-<div id="globalcontrols">
+<div id="globalcontrols" class="inverse">
 <div id="globalforward"></div>
 <div id="globalback"></div>
 <div id="globalplaypause">
@@ -241,19 +249,33 @@ opacity: .9;
 <div id="globalpause"></div>
 </div>
 </div>
-<div id="shufflebuttons">
+<div id="shufflebuttons" class="inverse">
 <img src="../img/shufflegrey.png" id="shuffle" class="shuffles"/>
 <img src="../img/shuffle.png" id="original-order" class="shuffles"/>
 <span class="onshuffle">On</span>
 <span class="offshuffle">Off</span>
 </div>
-<div id="keyboard"></div>
-<div id="instructions">
-<h1>Once a song is playing, you can control the music with your spacebar and arrows.</h1>
+<div id="keyboard" class="inverse"></div>
+<div id="instructions" class="inverse">
+<h1 class="inversetext">Once a song is playing, you can control the music with your spacebar and arrows.</h1>
+</div>
+<div id="lightswitch" class="inverse">
+<img src="../img/lightbulb.png"/>
+<div id="lightswitchtext" class="inverse">
+<h1 class="inversetext">Click me and see what happens!</h1>
+</div>
+</div>
+<div id="target" class="inverse">
+<img src="../img/target.png"/>
+<div id="targettext" class="inverse">
+<h1 class="inversetext">I'm here to help you find the song that's playing</h1>
+</div>
 </div>
 
+
+
 <div id="filters">
-<a href="http://www.audiblecoffee.com/genre/" target="_blank" id="roast"><div id="roastbutton"><h5>What's Your Roast?</h5></div></a>
+<a href="http://www.audiblecoffee.com/genre/" target="_blank" id="roast"><div id="roastbutton"><h5>What's Your Blend?</h5></div></a>
 <div id="toggle"><img src="../img/newmug.png" id="gear"/></div>
 
 <ul>
@@ -262,7 +284,7 @@ opacity: .9;
 		$genredb = array();
 		foreach($genres as $value) {
 			echo "<li><input type='checkbox' value='.{$value['ClassName']}' name='genre' id='{$value['ClassName']}' checked='checked' />
-		<label for='{$value['ClassName']}'>{$value['Name']}</label></li>";
+		<label for='{$value['ClassName']}'><span class='thelabel'>{$value['Name']}</span></label></li>";
 			//We're also going to be clever here and generate a new array that will be used for lookups in the track loop
 			$genredb[$value['ID']] = $value;
 		}
@@ -274,7 +296,8 @@ opacity: .9;
 </div>
 
 <div id="thegoods">
-<img src="../img/AC_LOGO-Rasterized.png" id="logo" />
+
+<div id="logo"></div>
 
 <div class="container">
 <?php
@@ -305,8 +328,7 @@ opacity: .9;
 				</div>
 				
 				<div class='thelink'>
-					<input type=\"text\"value=\"www.audiblecoffee.com/singles/m{$value['ID']}\" id=\"thetextbox\">
-					<div class='link_button'></div>
+					<a href='http://www.audiblecoffee.com/singles/m{$value['ID']}' target='_blank' ><div class='link_button'></div></a>
 				</div>
 				
 			</div>
@@ -482,7 +504,7 @@ var infloadmore = false;
 		$(sitem).parents(".square").addClass("playing")	
 		$('#globalplay').css('display','none');
 		$('#globalpause').css('display','block');
-        $('#globalcontrols,#shufflebuttons, #keyboard').fadeIn('slow', function() {})
+        $('#globalcontrols,#shufflebuttons, #keyboard, #lightswitch, #target').fadeIn('slow', function() {})
         };
 	
 		function playNext(idx,sitem) {
@@ -648,6 +670,20 @@ var infloadmore = false;
 		$("#instructions").css('display', 'none');
 		});
 		
+//target hover
+		$("#target").hover(function(){
+		$("#targettext").css('display', 'block');
+		}, function(){
+		$("#targettext").css('display', 'none');
+		});
+		
+//lightswitch hover	
+		$("#lightswitch").hover(function(){
+		$("#lightswitchtext").css('display', 'block');
+		}, function(){
+		$("#lightswitchtext").css('display', 'none');
+		});
+		
 //global arrow back
 		$(document).keydown(function(e){
 		if (e.keyCode == 37) { 
@@ -700,7 +736,7 @@ function showNav(){
     $('.twittab').stop().animate({ width: 193 }, 'slow')};
 function hideNav(){  
     $('#googfaceblack').stop().animate({ left: 27 }, 'slow');
-    $('.twittab').stop().animate({ width: 33 }, 'slow')};
+    $('.twittab').stop().animate({ width: 29 }, 'slow')};
 		
 		
 		$('.gogplustab').hover( 
@@ -722,6 +758,50 @@ function hideNav(){
 		function() {
 		$('.fbooktab').stop().animate({ width: 28 }, 'slow')}
 		);
+
+//Lightswitch	
+		//$('#lightswitch').toggle( 
+		//function() {
+		//$('.inverse').css('background-color','white');
+		//$('.inverse').css('color','black');
+		//$('.inversetext').css('color','black');
+		//$('#logo').css('background','url(../img/AC_LOGO-Rasterized_black.png)');
+		//$('#headertitle').css('background','url(../img/headertitle_black.png)');
+		//}, 
+		//function() {
+		//$('.inverse').css('background-color','black');
+		//$('.inverse').css('color','white');
+		//$('.inversetext').css('color','white');
+		//$('#logo').css('background','url(../img/AC_LOGO-Rasterized.png)');
+		//$('#headertitle').css('background','url(../img/headertitle_white.png)');
+		//});
+		
+		$('#target').click(function() { 
+		$.scrollTo( (".playing"), 800, {over:-0.5} );
+		});
+
+//logo in header	
+// $("#thegoods").scroll( function() {
+//    var value = $('.container').scrollTop();
+//    if ( value > 120 )
+//       alert("HELLO WORLD!");
+//    else
+//       alert("HELLO WORLD!!");
+// });
+
+		$(window).scroll (function ()
+		{
+		var y = $(window).scrollTop();
+		if (y >= 180)
+		{
+		$('#headertitle').fadeIn('slow', function() {})
+		}
+		else
+		{
+		$('#headertitle').css('display','none');
+		}
+		});
+
 
 
 </script>        

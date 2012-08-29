@@ -231,7 +231,7 @@ opacity: .9;
     	    </div>
     	    <div class="social">
 				<div class="facebook">
-					<a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>&amp;p[images][0]=http://www.audiblecoffee.com/img/logo.jpg&amp;p[title]=<?php echo $trackinfo['SharingTitle'];?>&amp;p[summary]=Revolutionizing the way you discover and listen to electronic dance music." target="_blank">
+					<a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://www.audiblecoffee.com/singles/m<?php echo $trackinfo['ID'];?>&amp;p[images][0]=http://www.audiblecoffee.com/img/logo.jpg&amp;p[title]=<?php echo $trackinfo['SharingTitle'];?>&amp;p[summary]=Revolutionizing the way you discover and listen to electronic dance music." target="_blank" >
 					<div class="fab_button"></div>
 					</a>
 				</div>

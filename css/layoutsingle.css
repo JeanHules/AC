@@ -1,6 +1,5 @@
 body{
 	background-color: black;
-	visibility: hidden;
 	font-family: 'Quattrocento Sans', sans-serif; 
 	font-weight: 100;
 	}
@@ -53,6 +52,18 @@ body{
 	width:307px;
 	height:307px;
 	top:30px;
+	}
+
+#commentbox{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 307px;
+	height: 307px;
+	top: 80px;
+	left: -83px;
+	margin-bottom: -100px;
 	}
 	
 #logo {

@@ -1,47 +1,91 @@
 body{
-	background-color: black;
 	visibility: hidden;
 	font-family: 'Quattrocento Sans', sans-serif; 
 	font-weight: 100;
 	}
+	
+.inverse{
+	background-color: black;
+	color:white;
+	}
+
+.inversetext{
+	color:white;
+	}
+	
+.inverse:hover{color:#f710ef;}
+
+a:visited
+{ 
+background-color:inherit;
+}
+	
 #topbuttons{position: fixed;
 			height:28px;
 			right:0px;
 			top:0px;
-			background: black;
-			width:113px;}	
+			width:113px;
+			}	
 			
 #about{font-family: 'Quattrocento Sans', sans-serif; 
 	   font-weight: 100;
-	   color:#848484;
 	   font-size:16px;
 	   position: absolute;
 	   top:5px;
 	   right:14px;
 	   text-decoration: none;
-	   z-index: 2000;
-	   background: black;}
+	   z-index: 2000;}
+	   
+#roasts{font-family: 'Quattrocento Sans', sans-serif; 
+	   font-weight: 100;
+	   font-size:16px;
+	   position: absolute;
+	   top:5px;
+	   right:131px;
+	   text-decoration: none;
+	   z-index: 2000;}
+	   
+.newnew{color: #f710ef;
+		font-weight: bold;
+		position: absolute;
+		left: 53px;
+		top: 0px;
+		font-style: italic;
+}
 	   
 #faq{font-family: 'Quattrocento Sans', sans-serif; 
 	   font-weight: 100;
-	   color:#848484;
 	   font-size:16px;
 	   position: absolute;
 	   top:5px;
 	   right:78px;
 	   text-decoration: none;
-	   z-index: 2000;
-	   background: black;}
+	   z-index: 2000;}
 	   
-#about:hover{color:white;}
-#faq:hover{color:white;}
+#about:hover,#faq:hover,#roasts:hover{color:white;}
+
 
 #topheader{
 	height: 28px;
 	width: 100%;
 	position: fixed;
 	top: 0px;
-	z-index: 1000;}
+	z-index: 1000;
+	left:0px;}
+	
+#headertitle{
+	background: url(../img/headertitle_white.png);
+	position: relative;
+	top: 4px;
+	z-index: 9;
+	height: 20px;
+	width: 221px;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	left: -15px;
+	}
 	
 #thegoods{
 	padding: 0px 10px 10px 34px; 
@@ -56,15 +100,19 @@ body{
 		
    
 #logo {
+	background: url(../img/AC_LOGO-Rasterized.png);
 	position: relative;
-	top:7px;
-	left:-23px;
+	top: 13px;
+	left: -19px;
 	z-index: 9;
 	margin-bottom: 5px;
+	height: 160px;
+	width: 512px;
+	background-repeat: no-repeat;
 	}
 
 .container{
-	top: -4px;
+	top: 11px;
 	width: 1233px;
 	margin-left: -20px;
     }
@@ -75,15 +123,17 @@ body{
 	position:relative;
 	float: left;
 	padding: 0;
-	margin:0px;
-	width:307px;
-	height:307px;
+	margin: 4px;
+	width: 300px;
+	height: 300px;
+	background-color: black;
+	border-radius: 7px;
     }
 
 .box {
 	position:absolute;
 	left:5px;
-	bottom:10px;
+	bottom:5px;
 	height: 50px;
 	width:290px;
 	opacity: .7;
@@ -118,7 +168,7 @@ body{
 	font-size: 20px;
 	position: relative;
 	top:4px;
-	left:10px;
+	left:7px;
 	display: block;
 	text-align: center;
 	width:280px;
@@ -317,7 +367,7 @@ h4{
 		position:fixed;
 		display: inline-block;
 		left: -259px;
-		top:161px;
+		top:169px;
 		width: 306px;
 		z-index: 1000;
 		cursor: default;}
@@ -435,7 +485,6 @@ h4{
 	}
 	
 #shufflebuttons{
-background-color: black;
 border-radius: 10px;
 height: 31px;
 width: 80px;
@@ -445,18 +494,21 @@ left: 167px;
 z-index: 1000;
 display: none;
 	}	
+
+
+/* Instructions Icon */
 	
 #keyboard{
-		background: url(../img/arrows.png);
-		position: absolute;
-		left: 100px;
-		bottom:5px;
-		height: 23px;
-		width: 31px;
-		position: fixed;
-		left: 257px;
-		z-index: 1000;
-		display:none;
+background: url(../img/arrows.png);
+position: absolute;
+left: 100px;
+bottom:5px;
+height: 23px;
+width: 31px;
+position: fixed;
+left: 257px;
+z-index: 1000;
+display:none;
 }
 
 #instructions{
@@ -467,21 +519,87 @@ left: 257px;
 position: fixed;
 width: 180px;
 z-index: 4000;
-background: black;
 height: 66px;
 border-radius: 7px;}
 
-
 #instructions h1{
     top: 8px;
-color: white;
+color: #848484;
 font-size: 14px;
 left: 5px;
 position: absolute;
 width: 180px;
 z-index: 4000;}
-	
-	
+
+
+/* Lightswitch Icon */
+
+#lightswitchtext{
+bottom: 35px;
+color: white;
+display: none;
+left: 298px;
+position: fixed;
+width: 152px;
+z-index: 4000;
+height: 47px;
+border-radius: 7px;}
+
+#lightswitchtext h1{
+    top: 8px;
+color: #848484;
+font-size: 14px;
+left: 5px;
+position: absolute;
+width: 180px;
+z-index: 4000;}
+
+#lightswitch{
+bottom: -5px;
+display: none;
+left: 308px;
+position: fixed;
+width: 25px;
+z-index: 4000;
+height: 35px;
+border-radius: 7px;}
+
+/* Target Icon */
+
+#targettext h1{
+    top: 8px;
+color: #848484;
+font-size: 14px;
+left: 5px;
+position: absolute;
+width: 180px;
+z-index: 4000;}
+
+#targettext{
+    bottom: 35px;
+color: #848484;
+display: none;
+left: 295px;
+position: fixed;
+width: 187px;
+z-index: 4000;
+height: 47px;
+border-radius: 7px;}
+
+#target{
+bottom: -3px;
+display: none;
+left: 304px;
+position: fixed;
+width: 25px;
+z-index: 4000;
+height: 35px;
+border-radius: 7px;}
+
+#target,#lightswitch,#keyboard,#original-order,#shuffle{opacity: .8;}
+
+#target:hover,#lightswitch:hover,#keyboard:hover,#original-order:hover,#shuffle:hover{opacity: 1;}
+
 #shuffle{
 	position: relative;
 	top: 2px;
@@ -498,6 +616,7 @@ z-index: 4000;}
 	display: none;
 	height:30px;
 	width:45px;
+	
 	}
 	
 .onshuffle, .offshuffle{
@@ -521,10 +640,9 @@ z-index: 4000;}
 #globalcontrols{position: fixed;
 		  bottom:0px;
 		  left:10px;
-		  background-color: black;
 		  opacity: 1;
 		  height:34px;
-		  width:299px;
+		  width:334px;
 		  z-index: 1000;
 		  border-radius: 7px;
 		  display: none;
@@ -585,7 +703,7 @@ z-index: 4000;}
 		   display: block;}
 
 .twitcon{
-	background: url(../img/socialtabs1.png)0px -113px;
+	background: url(../img/socialtabs_blank.png)0px -113px;
 	height: 27px;
 	width: 175px;
 	position: absolute;
@@ -594,7 +712,7 @@ z-index: 4000;}
 	z-index: 3000;}
 	
 .googlecon{
-	background: url(../img/socialtabs1.png)0px -144px;
+	background: url(../img/socialtabs_blank.png)0px -144px;
 	height: 27px;
 	width: 175px;
 	position: absolute;
@@ -604,7 +722,7 @@ z-index: 4000;}
 	}
 	
 .fbookcon{
-	background: url(../img/socialtabs1.png)0px 60px;
+	background: url(../img/socialtabs_blank.png)0px 60px;
 	height: 27px;
 	width: 174px;
 	position: absolute;
@@ -612,11 +730,11 @@ z-index: 4000;}
 	left: 0px;
 	z-index: 3000;}
 	
-.gogplustab:hover .googlecon {background: url(../img/socialtabs1.png)0px -53px;}
+.gogplustab:hover .googlecon {background: url(../img/socialtabs_blank.png)0px -53px;}
 
-.twittab:hover .twitcon {background: url(../img/socialtabs1.png)0px -83px;}
+.twittab:hover .twitcon {background: url(../img/socialtabs_blank.png)0px -83px;}
 
-.fbooktab:hover .fbookcon {background: url(../img/socialtabs1.png)0px -23px;}
+.fbooktab:hover .fbookcon {background: url(../img/socialtabs_blank.png)0px -23px;}
 	
 .twitterbutton{position: relative;
 			   left:31px;
@@ -639,7 +757,7 @@ z-index: 4000;}
 		  left:0px;
 		  z-index:1;
 		  height:28px;
-		  width:33px;
+		  width:28px;
 		  z-index: 2000;
 		  overflow: hidden;
 		  }
@@ -681,6 +799,6 @@ z-index: 4000;}
 			   
 #sharetabs{position: absolute;
 		   top:0px;
-		   left:-10px;}
+		   left:0px;}
 		   
 .thelink:hover #thetextbox{display: block;}
